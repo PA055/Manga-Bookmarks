@@ -25,10 +25,11 @@ function App() {
   return (
     <>
       <LikeButton />
-      <br />
       <LikeButton />
     </>
   )
+}
+ 
 }
 
 export default App;

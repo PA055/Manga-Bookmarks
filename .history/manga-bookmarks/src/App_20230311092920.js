@@ -1,11 +1,7 @@
 import './App.css';
 import React from 'react'
 
-function CrawlSites() {
-
-}
-
-function LikeButton() {
+function App() {
   const [liked, setLiked] = React.useState(false);
   if (liked){
     return (
@@ -15,20 +11,9 @@ function LikeButton() {
       </div>
     );
   }
-
   return (
     <button onClick={() => setLiked(true)}>Like</button>
   );
-}
-
-function App() {
-  return (
-    <>
-      <LikeButton />
-      <br />
-      <LikeButton />
-    </>
-  )
 }
 
 export default App;
