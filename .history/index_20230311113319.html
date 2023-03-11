@@ -13,6 +13,10 @@
     <a href="new.html" class="button">Add a new bookmark</a>
     <div id="bookmarks"></div>
 
-  <script src="bookmarks.js"></script>
+    <script>
+      import data from "./bookmarks.json" assert { type: "json" };
+      let bookmarks = document.getElementById('bookmarks');
+      console.log(data)
+    </script>
   </body>
 </html>

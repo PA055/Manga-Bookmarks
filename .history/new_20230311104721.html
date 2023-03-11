@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>New Bookmark</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <h1>New Bookmarks</h1>
+    <a href="index.html" class="back">back</a>
+    
+    <form id="newBookmark" onsubmit="AddBookmark()">
+        <label for="mname">Manga Name:</label>
+        <input type="text" id="mname" name="mname">
+        <br>
+        <label for="link">Manga Link:</label>
+        <input type="url" id="link" name="link">
+        <br>
+        <label for="chapter">Current Chapter:</label>
+        <input type="number" id="chapter" name="chapter">
+        <br>
+        <input type="submit">
+    </form>
+
+    <script src="./bookmarks.js"></script>
+  </body>
+</html>

@@ -31,23 +31,11 @@ h1 {
     height: 30px;
     font-size: 25px;
     margin: auto;
-    transform: translateX(10px);
-    -webkit-transform: translateX(10px);
-    -moz-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    -o-transform: translateX(10px);
-}
-
-#submit {
-    transform: translate(12px);
-    -webkit-transform: translate(12px);
-    -moz-transform: translate(12px);
-    -ms-transform: translate(12px);
-    -o-transform: translate(12px);
-}
-
-.label {
-    /* TODO: center this */
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
 
 

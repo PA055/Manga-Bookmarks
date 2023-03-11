@@ -47,7 +47,7 @@ h1 {
 }
 
 .label {
-    /* TODO: center this */
+    text-align: center;
 }
 
 

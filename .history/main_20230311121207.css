@@ -39,15 +39,11 @@ h1 {
 }
 
 #submit {
-    transform: translate(12px);
-    -webkit-transform: translate(12px);
-    -moz-transform: translate(12px);
-    -ms-transform: translate(12px);
-    -o-transform: translate(12px);
-}
-
-.label {
-    /* TODO: center this */
+    transform: translate(15px);
+    -webkit-transform: translate(15px);
+    -moz-transform: translate(15px);
+    -ms-transform: translate(15px);
+    -o-transform: translate(15px);
 }
 
 

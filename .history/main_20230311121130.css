@@ -38,18 +38,6 @@ h1 {
     -o-transform: translateX(10px);
 }
 
-#submit {
-    transform: translate(12px);
-    -webkit-transform: translate(12px);
-    -moz-transform: translate(12px);
-    -ms-transform: translate(12px);
-    -o-transform: translate(12px);
-}
-
-.label {
-    /* TODO: center this */
-}
-
 
 @media only screen and (max-width: 400px) {
     .back {

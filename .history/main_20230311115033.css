@@ -1,0 +1,24 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    display: block;
+    padding: 5px;
+    margin: auto;
+    width: fit-content;
+    text-decoration: none;
+    border: 4px gray outset;
+    color: black;
+}
+
+.button:hover {
+    border-style: inset;
+}
+
+.back {
+    text-decoration: none;
+    color: black;
+    text
+}

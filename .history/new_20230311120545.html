@@ -13,18 +13,17 @@
     <a href="index.html" class="back">back</a>
     <h1>New Bookmarks</h1>
     
-    <form id="newBookmark" onsubmit="AddBookmark()" action="index.html">
-        <label for="mname" class="label for-mname">Manga Name:</label>
+    <form id="newBookmark" onsubmit="AddBookmark()">
+        <label for="mname">Manga Name:</label>
         <input type="text" id="mname" name="mname" class="input">
         <br>
-        <label for="link" class="label for-link">Manga Link:</label>
+        <label for="link">Manga Link:</label>
         <input type="url" id="link" name="link" class="input">
         <br>
-        <label for="chapter" class="label for-chapter">Current Chapter:</label>
+        <label for="chapter">Current Chapter:</label>
         <input type="number" id="chapter" name="chapter" class="input">
         <br>
-        <br>
-        <input type="submit" value="CREATE" id="submit" class="input">
+        <input type="submit" id="submit">
     </form>
 
     <script src="./bookmarks.js"></script>

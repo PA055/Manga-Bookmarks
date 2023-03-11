@@ -46,10 +46,6 @@ h1 {
     -o-transform: translate(12px);
 }
 
-.label {
-    /* TODO: center this */
-}
-
 
 @media only screen and (max-width: 400px) {
     .back {

@@ -13,6 +13,15 @@
     <a href="new.html" class="button">Add a new bookmark</a>
     <div id="bookmarks"></div>
 
-  <script src="bookmarks.js"></script>
+    <script>
+      let bookmarks = document.getElementById('bookmarks');
+      var fileread = new FileReader();
+      fileread.onload = function(e) {
+        var content = e.target.result;
+        var parsed = JSON.parse(content);
+        console.log(parsed);
+      };
+      fileread.readAsText('./bookmarks.json')
+    </script>
   </body>
 </html>
