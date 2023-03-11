@@ -1,0 +1,11 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    height: 50px;
+    border: 2px black inset;
+
+}

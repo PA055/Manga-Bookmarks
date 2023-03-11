@@ -1,0 +1,17 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+    border: 4px gray outset;
+    color: black;
+
+}
+
+.button:hover {
+    border-style: inset;
+}

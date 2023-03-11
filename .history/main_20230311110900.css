@@ -1,0 +1,22 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    display: block;
+    padding: 5px;
+    margin: auto;
+    text-decoration: none;
+    border: 4px gray outset;
+    color: black;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.button:hover {
+    border-style: inset;
+}
