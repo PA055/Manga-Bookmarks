@@ -1,20 +1,27 @@
-let bookmarks = document.getElementById('bookmarks');
 const url = "./bookmarks.json"
 
-$.getJSON(url, function(data){
-    console.log(data);
-});
+const fetchJson = async () => {
+    try {
+        const file = await fetch(url);
+        const response = await file.json();
 
-// const fetchJson = async () => {
-//     try {
-//         const file = await fetch(url);
-//         const response = await file.json();
-//     } catch (error) {
-//         console.log(error);
-//     }
-// };
+        console.log(response[0].link)
+        createBookmarks(response);
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+fetchJson();
+
+function createBookmarks(data) {
+    document.getElementById('bookmarks').getElementsByTagName('ul');
+}
 
 function AddBookmark() {
     var formData = new FormData(document.querySelector('form'))
-    
+    console.log(formData)
+    console.log(formData.get("mname") + ', ' + formData.get("link"))
+
 }

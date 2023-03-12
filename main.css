@@ -47,9 +47,35 @@ h1 {
 }
 
 .label {
-    /* TODO: center this */
+    display: block;
+    text-align: center;
 }
 
+.bookmark {
+    list-style: none;
+    width: 95%;
+    margin: 10px;
+    border: 5px solid darkslategray;
+}
+.bookmarks ul {
+    padding-left: auto;
+}
+
+.bookmark a {
+    display: block;
+    height: 100%;
+    margin: inherit;
+    text-decoration: none;
+    color: black;
+}
+
+.bookmark h3 {
+    margin: 5px;
+}
+
+.bookmark p {
+    margin: 5px;
+}
 
 @media only screen and (max-width: 400px) {
     .back {
