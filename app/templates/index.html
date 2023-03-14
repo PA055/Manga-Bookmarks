@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>New Bookmark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <h1>Your Bookmarks</h1>
+    <a href="{{ url_for('new') }}" class="button">Add a new bookmark</a>
+
+
+    <div id="bookmarks">
+      <ul id="bookmarks-ul">
+        {% for bookmark in bookmarks %}
+          <li class="bookmark">
+            <a class="clearfix" href="{{ bookmark['latest_link'] }}" target="_blank">
+              <div class="title-div">
+                <h3 class="title">{{ bookmark['mname'] }}</h3>
+                <p class="latest">Latest Chapter: Chapter {{ bookmark['latest'] }}</p>
+              </div>
+              <div class="last">Last Read: Chapter {{ bookmark['chapter'] }}</div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  <!-- <script src="./bookmarks.js"></script> -->
+  </body>
+</html>
