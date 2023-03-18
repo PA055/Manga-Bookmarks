@@ -23,6 +23,8 @@ def index():
 def new():
     form = NewBookmarkForm()
     if form.validate_on_submit():
-        flash(f'Created new bookmark with mname={form.mname.data}, link={form.link.data}, and chapter={form.chapter.data}')
+        bkmrk = Bookmark(mname=form.mname.data, link=form.link.data, chapter=form.chapter.data)
+        db.session.add(bkmrk)
+        db.session.commit()
         return redirect(url_for('index'))
     return render_template('new.html', form=form)
