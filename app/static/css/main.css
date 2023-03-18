@@ -126,6 +126,23 @@ h1 {
     color: rgb(71, 71, 255);
 }
 
+.errors {
+    color: red;
+    width: 100%;
+    padding-left: unset;
+    margin: 5px 0px;
+}
+
+.errors li {
+    list-style: none;
+    text-align: center;
+    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+}
+
 
 @media only screen and (max-width: 400px) {
     .back {
