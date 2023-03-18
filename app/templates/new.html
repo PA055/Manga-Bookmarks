@@ -1,3 +1,5 @@
+{% from "_formhelpers.html" import render_field %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,11 +10,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashed-messages">
+        {% for message in messages %}
+          <li class="message">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% endwith %}
 
     <a href="{{ url_for('index') }}" class="back">back</a>
     <h1 id="newTitle">New Bookmarks</h1>
 
-    <form id="newBookmark" onsubmit="" action="{{ url_for('index') }}">
+    <form id="newBookmark" method="post" novalidate>
+      {{ form.hidden_tag() }}
+
+      {{ render_field(form.mname, class_="input") }}
+      {{ render_field(form.link, class_="input") }}
+      {{ render_field(form.chapter, class_="input") }}
+      {{ form.submit(class_="input") }}
+
+    </form>
+
+
+    <!-- <form id="newBookmark" onsubmit="" action="{{ url_for('index') }}">
         <label for="mname" class="label for-mname">Manga Name:</label>
         <input type="text" id="mname" name="mname" class="input">
         <br>
@@ -24,7 +46,7 @@
         <br>
         <br>
         <input type="submit" value="CREATE" id="submit" class="input">
-    </form>
+    </form> -->
 
     <!-- <script src="./bookmarks.js"></script> -->
   </body>

@@ -1,4 +1,5 @@
-from flask import render_template, url_for
+from flask import render_template, url_for, flash, redirect
+from app.forms import *
 from app import app
 
 
@@ -21,6 +22,10 @@ def index():
     return render_template('index.html', bookmarks=bookmarks)
 
 
-@app.route('/new')
+@app.route('/new', methods=['GET', 'POST'])
 def new():
-    return render_template('new.html')
+    form = NewBookmarkForm()
+    if form.validate_on_submit():
+        flash(f'Created new bookmark with mname={form.mname.data}, link={form.link.data}, and chapter={form.chapter.data}')
+        return redirect(url_for('index'))
+    return render_template('new.html', form=form)
