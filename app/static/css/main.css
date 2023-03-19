@@ -79,7 +79,7 @@ h1 {
     list-style: none;
     width: 95%;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     border: 5px solid black;
     background-color:rgb(29, 29, 29);
 
@@ -93,6 +93,7 @@ h1 {
 }
 
 .bookmark a {
+    vertical-align: top;
     display: table;
     width: 100%;
     height: 100%;
@@ -104,6 +105,10 @@ h1 {
     margin: auto;
     font-weight: bolder;
     font-size: 25px;
+}
+
+.bookmark .title-div {
+    padding-left: 10px;
 }
 
 .bookmark p {
@@ -121,6 +126,17 @@ h1 {
     color:rgb(88, 88, 88);
     font-weight: bold;
 }
+
+.bookmark .last span {
+    height: 100%;
+}
+
+.bookmark .settings {
+    float: right;
+    display: inline;
+    margin-left: 5px;
+}
+
 
 .new-chapter {
     color: rgb(71, 71, 255);
