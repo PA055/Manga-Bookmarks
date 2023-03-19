@@ -29,7 +29,7 @@ def crawl_sites(bookmarks):
                 return v
     results = asession.run(*[lambda: crawlNitroScans(b) for b in bookmarks if 'https://nitroscans.com' in b.link])
     nitroscans = {i.id: find(i.id, results) for i in bookmarks}
-
+    manga4life = {i.id: {}}
     return {i.id: {'link': i.link, 'chapter': 0, 'num chpaters': 0} for i in bookmarks}
 
 
