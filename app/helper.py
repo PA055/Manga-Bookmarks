@@ -5,14 +5,14 @@ session = HTMLSession()
 def clean_float(f):
     return int(f) if float(f) == int(f) else float(f)
 
-async def crawlNitroScans(bookmark):
-    r = await asession.get(bookmark.link)
-    await r.html.arender()
+def crawlNitroScans(bookmark):
+    r = session.get(bookmark.link)
+    r.html.render()
     chapters = [a for a in r.html.find('a') if 'chapter ' in a.text.lower()]
     olderChapters = [a for a in chapters if float(a.text[8:]) > bookmark.chapter]
     return {'id': bookmark.id, 'link': min(olderChapters, key=lambda a: float(a.text[8:]), default=bookmark.link).attrs['href'], 'chapter': clean_float(max(olderChapters, key=lambda a: float(a.text[8:]), default=bookmark.chapter).text[8:]), 'num_chapters': len(olderChapters)}
 
-async def crawlManga4Life(bookmark):
+def crawlManga4Life(bookmark):
     r = session.get(bookmark.link)
     xml = r.html.find('link[title="RSS Feed"]', first=True).attrs['href']
     xmlr = session.get(xml)
@@ -27,7 +27,8 @@ def crawl_sites(bookmarks):
         for v in list:
             if v['id'] == id:
                 return v
-    results = asession.run(*[lambda: crawlNitroScans(b) for b in bookmarks if 'https://nitroscans.com' in b.link.lower()])
+    # results = asession.run(*[lambda: crawlNitroScans(b) for b in bookmarks if 'https://nitroscans.com' in b.link.lower()])
+    results = [crawlNitroScans(bookmark) for bookmark in bookmarks if 'https://nitroscans.com' in bookmark.link.lower()]
     nitroscans = {i.id: find(i.id, results) for i in bookmarks}
     results = [crawlManga4Life(bookmark) for bookmark in bookmarks if 'https://manga4life.com' in bookmark.link.lower()]
     manga4life = {i.id: find(i.id, results) for i in bookmarks}
