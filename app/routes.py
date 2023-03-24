@@ -8,7 +8,7 @@ from app import app
 @app.route('/')
 def index():
     bookmarks = Bookmark.query.all()
-    crawled = crawl_sites(bookmarks)
+    # crawled = crawl_sites(bookmarks)
     bookmarks = [{
         'mname': i.mname,
         'link': i.link,
