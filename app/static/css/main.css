@@ -77,11 +77,13 @@ h1 {
 
 .bookmark {
     list-style: none;
-    width: 95%;
+    width: 98%;
     margin: 10px;
     padding: 5px;
     border: 5px solid black;
     background-color:rgb(29, 29, 29);
+    clear: both;
+    overflow: hidden;
 
 }
 #bookmarks ul {
@@ -93,12 +95,14 @@ h1 {
 }
 
 .bookmark a {
+    float: left;
     vertical-align: top;
     display: table;
-    width: 100%;
+    width: 99%;
     height: 100%;
     text-decoration: none;
     color: rgb(209, 209, 209);
+    margin-right: 0px;
 }
 
 .bookmark .title {
@@ -117,7 +121,7 @@ h1 {
 
 .bookmark div {
     display: table-cell;
-    width: 50%;
+    width: 49.5%;
 }
 
 .bookmark .last {
@@ -131,10 +135,47 @@ h1 {
     height: 100%;
 }
 
-.bookmark .settings {
+.bookmark .menu-toggle {
+    font-size: 25px;
+    color:rgb(180, 180, 180);
+    background-color: rgba(0,0,0,0);
+    border: none;
     float: right;
     display: inline;
-    margin-left: 5px;
+    margin-left: 0px;
+    width: 1%;
+}
+
+.bookmark .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    width: 60px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+    padding: 3px;
+    clear: both;
+    overflow: hidden;
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.bookmark .menu * {
+    padding: 3px;
+    border: 2px solid black;
+    border-bottom-width: 1px;
+    width: 50px;
+}
+
+.bookmark .hidden {
+    display: none;
 }
 
 

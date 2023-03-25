@@ -27,24 +27,25 @@ def crawlManga4Life(bookmark):
 
 
 def crawl_sites(bookmarks):
-    def find(id, list):
-        for v in list:
-            if v['id'] == id:
-                return v
-    # results = asession.run(*[lambda: crawlNitroScans(b) for b in bookmarks if 'https://nitroscans.com' in b.link.lower()])
-    results = [crawlNitroScans(bookmark) for bookmark in bookmarks if 'https://nitroscans.com' in bookmark.link.lower()]
-    nitroscans = {i.id: find(i.id, results) for i in bookmarks}
-    results = [crawlManga4Life(bookmark) for bookmark in bookmarks if 'https://manga4life.com' in bookmark.link.lower()]
-    manga4life = {i.id: find(i.id, results) for i in bookmarks}
-    all = {}
-    for b in bookmarks:
-        if b.id in nitroscans.keys():
-            all[b.id] = nitroscans[b.id]
-        elif b.id in manga4life.keys():
-            all[b.id] = manga4life[b.id]
-        else:
-            all[b.id] = {'link': i.link, 'chapter': 0, 'num chpaters': 0}
+    # def find(id, list):
+    #     for v in list:
+    #         if v['id'] == id:
+    #             return v
+    # # results = asession.run(*[lambda: crawlNitroScans(b) for b in bookmarks if 'https://nitroscans.com' in b.link.lower()])
+    # results = [crawlNitroScans(bookmark) for bookmark in bookmarks if 'https://nitroscans.com' in bookmark.link.lower()]
+    # nitroscans = {i.id: find(i.id, results) for i in bookmarks}
+    # results = [crawlManga4Life(bookmark) for bookmark in bookmarks if 'https://manga4life.com' in bookmark.link.lower()]
+    # manga4life = {i.id: find(i.id, results) for i in bookmarks}
+    # all = {}
+    # for b in bookmarks:
+    #     if b.id in nitroscans.keys():
+    #         all[b.id] = nitroscans[b.id]
+    #     elif b.id in manga4life.keys():
+    #         all[b.id] = manga4life[b.id]
+    #     else:
+    #         all[b.id] = {'link': b.link, 'chapter': 0, 'num chapters': 0}
 
-    return all
+    # return all
+    return {b.id: {'link': b.link, 'chapter': 0, 'num chapters': 0} for b in bookmarks}
 
 
