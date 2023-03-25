@@ -14,4 +14,4 @@ migrate = Migrate(app, db)
 from app import routes, models
 
 if __name__ == '__main__':
-    asyncio.run(app.run_task(port=5000))
+    asyncio.run(app.run_task(port=5050))
