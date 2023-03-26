@@ -1,2 +1,2 @@
-QUART_APP=app:app
+QUART_APP=app.py
 QUART_DEBUG=1

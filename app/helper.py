@@ -1,6 +1,5 @@
-from requests_html import AsyncHTMLSession, HTMLSession
+from requests_html import AsyncHTMLSession
 asession = AsyncHTMLSession()
-session = HTMLSession()
 
 def clean_float(f):
     return int(f) if float(f) == int(f) else float(f)
@@ -17,7 +16,7 @@ async def crawlNitroScans(bookmark):
 async def crawlManga4Life(bookmark):
     r = await asession.get(bookmark.link)
     xml = r.html.find('link[title="RSS Feed"]', first=True).attrs['href']
-    xmlr = session.get(xml)
+    xmlr = asession.get(xml)
     chapters = [i.text.split('\n') for i in xmlr.html.find("item")]
     idx = chapters[0][0].lower().find('chapter ')
     olderChapters = [c for c in chapters if float(c[0][idx+8:]) > bookmark.chapter]
