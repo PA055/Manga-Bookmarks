@@ -52,5 +52,5 @@ def edit(id):
         return redirect(url_for('index'))
     form.mname.data = bkmrk.mname
     form.link.data = bkmrk.link
-    form.chapter.data = bkmrk.chapter
+    form.chapter.data = clean_float(bkmrk.chapter)
     return render_template('new.html', form=form)
