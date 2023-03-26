@@ -47,3 +47,5 @@ def nitro():
             'chapter': clean_float(max(chapters, key=lambda a: float(a.text.strip()[8:])).text.strip()[8:]), 
             'num_chapters': len(olderChapters)
         }
+
+# https://medium.com/analytics-vidhya/asynchronous-web-scraping-101-fetching-multiple-urls-using-arsenic-ec2c2404ecb4
