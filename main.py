@@ -101,4 +101,13 @@ async def main():
         {'id': 13, 'link': 'https://manga4life.com/manga/Tensei-Shitara-Slime-Datta-Ken', 'chapter': 104},
     ]
 
-    return await asyncio.gather(*(manga(session, bookmark) if 'https://manga4life.com'  in bookmark['link'] else nitro(session, bookmark) for bookmark in bookmarks))
+    return await asyncio.gather(*(
+        manga(session, bookmark) if 'https://manga4life.com'  in bookmark['link'] else (
+        nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark['link'] else (
+        nitro(session, bookmark)))
+        for bookmark in bookmarks))
+
+
+@app.get('/api/filter/<h>')
+def filter(h):
+     return {}
