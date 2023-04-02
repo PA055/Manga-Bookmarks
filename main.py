@@ -1,9 +1,16 @@
 from fastapi import FastAPI
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 from requests_html import AsyncHTMLSession
 from requests.structures import CaseInsensitiveDict
 import json, asyncio
 
+SQLALCHEMY_DATABASE_URL = "sqlite:///./app.db"
 app = FastAPI()
+engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
 
 def clean_float(f):
     return int(f) if float(f) == int(f) else float(f)
