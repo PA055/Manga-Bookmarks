@@ -96,7 +96,7 @@ async def mangas():
     return await asyncio.gather(*[manga(session, bookmark) for bookmark in bookmarks])
 
 @app.get('/api/all')
-async def main():
+async def main(db: Session = Depends(get_db)):
     session = AsyncHTMLSession()
     bookmarks = [
         {'id': 7, 'link': 'https://nitroscans.com/series/martial-peak/', 'chapter': 3000},
@@ -119,6 +119,7 @@ async def main():
         {'id': 1, 'link': 'https://www.nitroscans.com/series/i-stole-the-number-one-rankers-soul/', 'chapter': 14},
         {'id': 13, 'link': 'https://manga4life.com/manga/Tensei-Shitara-Slime-Datta-Ken', 'chapter': 104},
     ]
+    # bookmarks = api_models.get_all_bookmarks(db)
 
     return await asyncio.gather(*(
         manga(session, bookmark) if 'https://manga4life.com'  in bookmark['link'] else (
