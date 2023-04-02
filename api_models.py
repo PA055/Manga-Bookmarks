@@ -1,9 +1,8 @@
-from sqlalchemy import Column, Numeric, String
+from sqlalchemy import Column, Numeric, String, Integer
 from sqlalchemy.orm import Session
 
-from main import Base
-
-class Bookmark(Base):
+import main
+class Bookmark(main.Base):
     __tablename__ = 'bookmark'
 
     id = Column(Integer, primary_key=True, unique=True, index=True)
