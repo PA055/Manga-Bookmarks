@@ -1,6 +1,17 @@
-const url = "./bookmarks.json"
 
-const fetchJson = async () => {
+const getHTML = async (url) => {
+    const ifr = document.createElement('iframe')
+    ifr.src = url
+    // ifr.display = none
+    document.body.appendChild(ifr)
+    ifr.addEventListener( "load", function(e) {
+        var html = ifr.contentWindow.document.body.innerHTML;
+        console.log(html)
+    })
+    
+};
+
+const fetchJson = async (url) => {
     try {
         const file = await fetch(url);
         const data = await file.json();
@@ -12,13 +23,13 @@ const fetchJson = async () => {
     }
 };
 
-var data = fetchJson();
-data.then(function(d) {createBookmarks(d)})
+var data = fetchJson("./bookmarks.json");
+data.then(function(d) {if (document.getElementById("bookmarks")) {createBookmarks(d)}})
 
 function createBookmarks(data) {
     data.forEach(object => {
-        console.log(object)
         parseWebsite(object)
+        console.log(object)
     });
     data.forEach(object => {
         createBookmark(object);
@@ -26,7 +37,8 @@ function createBookmarks(data) {
 }
 
 function parseWebsite(object) {
-    
+    var html = getHTML(object.link)
+    console.log(html)
 }
 
 
@@ -68,7 +80,7 @@ function createBookmark(object) {
 
 function AddBookmark() {
     var formData = new FormData(document.querySelector('form'));
-    var existingData = fetchJson();
+    var existingData = fetchJson("./bookmarks.json");
     alert('1')
     existingData.then(function(d){
         var data = {mname: formData.get("mname"), link: formData.get('link'), chapter: formData.get('chapter')}
