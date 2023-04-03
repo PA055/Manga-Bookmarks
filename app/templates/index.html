@@ -25,30 +25,11 @@
 
     <div id="bookmarks">
       <ul id="bookmarks-ul">
-        {% for bookmark in bookmarks %}
-          <li class="bookmark clearfix">
-            <a class="clearfix" href="{{ bookmark['latest_link'] }}" target="_blank">
-              <div class="title-div">
-                <h3 class="title">{{ bookmark['mname'] }}</h3>
-                <p class="latest">Latest Chapter: Chapter {{ bookmark['latest'] }}</p>
-              </div>
-              <div class="last">
-                <span class="chapter">Last Read: Chapter {{ bookmark['chapter'] }}</span>
-              </div>
-            </a>
-            <button class="menu-toggle" onclick="toggleMenu({{ bookmark['id'] }})">≡</button>
-            <div class="menu hidden" id="menu-{{ bookmark['id'] }}">
-              <a class="settings" href="{{ url_for('delete', id=bookmark['id']) }}">Delete</a><br />
-              <a class="settings" href="{{ url_for('edit', id=bookmark['id']) }}">Edit</a>
-            </div>
-
-            <!-- <a class="settings"><i class="fa-solid fa-gear"></i></a> -->
-          </li>
-        {% endfor %}
+        <span id="loading">Loading...</span>
       </ul>
     </div>
 
 
-  <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
-  </body>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
 </html>

@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
 from app.forms import *
 from app.models import *
 from app.helper import *
@@ -7,19 +7,7 @@ from app import app
 
 @app.route('/')
 def index():
-    bookmarks = Bookmark.query.all()
-    crawled = crawl_sites(bookmarks)
-
-    bookmarks = [{
-        'id': i.id,
-        'mname': i.mname,
-        'link': i.link,
-        'chapter': clean_float(i.chapter),
-        'latest': crawled[i.id]['chapter'],
-        'latest_link': crawled[i.id]['link']
-    } for i in bookmarks]
-
-    return render_template('index.html', bookmarks=bookmarks)
+    return render_template('index.html')
 
 
 @app.route('/new', methods=['GET', 'POST'])
@@ -54,3 +42,18 @@ def edit(id):
     form.link.data = bkmrk.link
     form.chapter.data = clean_float(bkmrk.chapter)
     return render_template('new.html', form=form)
+
+
+@app.route('/read/<int:id>/', methods=['GET', 'POST'])
+def read(id):
+    bk = Bookmark.query.get_or_404(id)
+    if request.method == 'POST':
+        latest = request.values.get('latest')
+    else:
+        latest = request.args.get('latest')
+
+    bk.chapter = latest
+    db.session.commit()
+
+    return redirect(url_for('index'))
+

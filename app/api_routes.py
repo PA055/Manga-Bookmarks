@@ -45,8 +45,24 @@ async def main(db: Session = Depends(app.get_db)):
     session = AsyncHTMLSession()
     bookmarks = api_models.get_all_bookmarks(db)
 
-    return await asyncio.gather(*(
+    results = await asyncio.gather(*(
         manga(session, bookmark) if 'https://manga4life.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark.link else (
         nitro(session, bookmark)))
         for bookmark in bookmarks))
+
+    # return results
+
+    updates = {}
+    for bookmark in results:
+        updates[bookmark['id']] = bookmark
+
+    return [{
+        'id': i.id,
+        'mname': i.mname,
+        'link': i.link,
+        'chapter': helper.clean_float(i.chapter),
+        'latest': helper.clean_float(updates[i.id]['chapter']),
+        'latest_link': updates[i.id]['link'],
+        'num_new_chapters': updates[i.id]['num_chapters']
+    } for i in bookmarks]
