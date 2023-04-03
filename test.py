@@ -85,6 +85,7 @@ async def mangas():
         {'id': 18, 'link': 'https://manga4life.com/manga/Heavenly-Demon-Instructor', 'chapter': 89},
         {'id': 19, 'link': 'https://manga4life.com/manga/Jujutsu-Kaisen', 'chapter': 100},
     ]
+    
 
     return await asyncio.gather(*[manga(session, bookmark) for bookmark in bookmarks])
 
