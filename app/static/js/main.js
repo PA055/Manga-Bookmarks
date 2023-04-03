@@ -19,6 +19,22 @@ function updateBookmarkRead(bookmark) {
     bookmark_container.getElementsByClassName('chapter')[0].innerHTML = 'Last Read: ' + bookmark.latest.toString();
 }
 
+function FilterBookmarks() {
+    const input = document.getElementById('bookmarks-search');
+    const filterValue = input.value.toUpperCase();
+    const ul = document.getElementById('bookmarks-ul');
+    const li = ul.getElementsByTagName('li');
+
+    for (let i = 0; i < li.length; i++) {
+        title = li[i].getElementsByClassName('title')[0]
+        txtValue = title.innerText;
+        if (txtValue.toUpperCase().indexOf(filterValue) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
 
 function createBookmark(bookmark) {
     const parent = document.getElementById('bookmarks-ul')

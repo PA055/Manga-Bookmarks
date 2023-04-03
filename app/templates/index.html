@@ -22,6 +22,7 @@
     <h1>Your Bookmarks</h1>
     <a href="{{ url_for('new') }}" class="button">Add a new bookmark</a>
 
+    <input type="text" id="bookmarks-search" onkeyup="FilterBookmarks()" placeholder="Search for mangas..">
 
     <div id="bookmarks">
       <ul id="bookmarks-ul">

@@ -98,7 +98,7 @@ h1 {
     float: left;
     vertical-align: top;
     display: table;
-    width: 98.5%;
+    width: 97.5%;
     height: 100%;
     text-decoration: none;
     color: rgb(209, 209, 209);
@@ -165,6 +165,23 @@ h1 {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+#bookmarks-search {
+    background-image: url('../img/searchicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius:5px;
+    margin: 10px auto;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
 }
 
 .bookmark .menu * {
