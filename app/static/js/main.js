@@ -15,7 +15,8 @@ function updateBookmarkRead(bookmark) {
     bookmarks_container = document.getElementById('bookmarks-ul');
     bookmark_container = document.getElementById('bookmark-' + bookmark.id.toString());
     bookmarks_container.append(bookmark_container);
-    bookmarks_container.getElementsByClassName('new-chapter')[0].classList.remove('new-chapter');
+    bookmark_container.getElementsByTagName('a')[0].href = bookmark.link;
+    bookmark_container.getElementsByClassName('new-chapter')[0].classList.remove('new-chapter');
     bookmark_container.getElementsByClassName('chapter')[0].innerHTML = 'Last Read: ' + bookmark.latest.toString();
 }
 

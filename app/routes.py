@@ -52,6 +52,9 @@ def read(id):
     else:
         latest = request.args.get('latest')
 
+    if latest is None:
+        latest = 0
+
     bk.chapter = latest
     db.session.commit()
 
