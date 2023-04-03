@@ -10,11 +10,7 @@ h1 {
 }
 
 #newTitle {
-    transform: translateX(-20px);
-    -webkit-transform: translateX(-20px);
-    -moz-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    -o-transform: translateX(-20px);
+    float: middle;
 }
 
 .button {
@@ -39,7 +35,6 @@ h1 {
     float: left;
     margin-top: 8px;
     margin-left: 10px;
-
 }
 
 .input {
@@ -82,12 +77,14 @@ h1 {
 
 .bookmark {
     list-style: none;
-    width: 95%;
+    width: 98%;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     border: 5px solid black;
     background-color:rgb(29, 29, 29);
-    
+    clear: both;
+    overflow: hidden;
+
 }
 #bookmarks ul {
     padding-left: unset;
@@ -98,11 +95,14 @@ h1 {
 }
 
 .bookmark a {
+    float: left;
+    vertical-align: top;
     display: table;
-    width: 100%;
+    width: 98.5%;
     height: 100%;
     text-decoration: none;
     color: rgb(209, 209, 209);
+    margin-right: 0px;
 }
 
 .bookmark .title {
@@ -111,13 +111,17 @@ h1 {
     font-size: 25px;
 }
 
+.bookmark .title-div {
+    padding-left: 10px;
+}
+
 .bookmark p {
     margin: 5px 0px;
 }
 
 .bookmark div {
     display: table-cell;
-    width: 50%;
+    width: 49.5%;
 }
 
 .bookmark .last {
@@ -127,8 +131,73 @@ h1 {
     font-weight: bold;
 }
 
+.bookmark .last span {
+    height: 100%;
+}
+
+.bookmark .menu-toggle {
+    font-size: 25px;
+    color:rgb(180, 180, 180);
+    background-color: rgba(0,0,0,0);
+    border: none;
+    float: right;
+    display: inline;
+    margin-left: 0px;
+    width: 1.5%;
+}
+
+.bookmark .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    width: 60px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+    padding: 3px;
+    clear: both;
+    overflow: hidden;
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.bookmark .menu * {
+    padding: 3px;
+    border: 2px solid black;
+    border-bottom-width: 1px;
+    width: 50px;
+}
+
+.bookmark .hidden {
+    display: none;
+}
+
+
 .new-chapter {
     color: rgb(71, 71, 255);
+}
+
+.errors {
+    color: red;
+    width: 100%;
+    padding-left: unset;
+    margin: 5px 0px;
+}
+
+.errors li {
+    list-style: none;
+    text-align: center;
+    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
 }
 
 
