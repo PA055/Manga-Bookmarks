@@ -6,11 +6,6 @@ from sqlalchemy.orm import Session
 import asyncio, app
 from app import api_models, helper
 
-class Status(int, Enum):
-    reading = 2
-    paused = 1
-    toRead = 0
-
 
 async def nitro(session, bookmark):
     # r = await session.get(bookmark.link)
@@ -73,7 +68,7 @@ async def main(db: Session = Depends(app.get_db)):
 
 
 @app.api_app.get('/api/status/{status}')
-async def main(status: Status, db: Session = Depends(app.get_db)):
+async def main(status: int, db: Session = Depends(app.get_db)):
     session = AsyncHTMLSession()
     bookmarks = api_models.get_bookmarks_by_status(db, status)
 
@@ -97,4 +92,3 @@ async def main(status: Status, db: Session = Depends(app.get_db)):
         'latest_link': updates[i.id]['link'],
         'num_new_chapters': updates[i.id]['num_chapters']
     } for i in bookmarks]
-

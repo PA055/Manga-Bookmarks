@@ -141,7 +141,21 @@ async function getBookmarks(api_url) {
     document.getElementById('loading').style.display = 'none'
 }
 
-getBookmarks('/api/all')
-// createBookmark({id: 8, mname: "FFF Class Trashhero", link: "https://manga4life.com/manga/FFF-Class-Trashero", chapter: 142, latest: 145, latest_link: "https://manga4life.com/read-online/FFF-Class-Trashero-chapter-143-page-1.html", num_new_chapters: 3})
-// document.getElementById('loading').style.display = 'none'
+async function displayBookmarks(status) {
+    document.getElementsByClassName('selected')[0].classList.remove('selected')
+    document.getElementById('tab-' + status.toString()).classList.add('selected')
+    document.getElementById('loading').style.display = ''
+    document.getElementById('error').style.display = 'none'
+    bookmarks = document.getElementsByClassName('bookmark')
+    for (let i = 0; i < bookmarks.length; i++) {
+        bookmarks[i].remove()
+    }
+    if (status == -1) {
+        await getBookmarks('/api/all')
+    } else {
+        await getBookmarks('/api/status/' + status.toString())
+    }
+}
 
+
+displayBookmarks(2)
