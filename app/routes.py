@@ -12,9 +12,10 @@ def index():
 
 @app.route('/new', methods=['GET', 'POST'])
 def new():
-    form = BookmarkForm()
+    form = BookmarkForm(status = 2)
     if form.validate_on_submit():
-        bkmrk = Bookmark(mname=form.mname.data, link=form.link.data, chapter=form.chapter.data)
+        print(form.status.data)
+        bkmrk = Bookmark(mname=form.mname.data, link=form.link.data, chapter=form.chapter.data, status=form.status.data)
         db.session.add(bkmrk)
         db.session.commit()
         return redirect(url_for('index'))
@@ -28,6 +29,7 @@ def delete(id):
     db.session.commit()
     return redirect(url_for('index'))
 
+
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id):
     form = BookmarkForm()
@@ -36,11 +38,13 @@ def edit(id):
         bkmrk.mname = form.mname.data
         bkmrk.link = form.link.data
         bkmrk.chapter = form.chapter.data
+        bkmrk.status = form.status.data
         db.session.commit()
         return redirect(url_for('index'))
     form.mname.data = bkmrk.mname
     form.link.data = bkmrk.link
     form.chapter.data = clean_float(bkmrk.chapter)
+    form.status.data = bkmrk.status
     return render_template('new.html', form=form)
 
 

@@ -5,12 +5,18 @@ function toggleMenu(id) {
 
 function updateBookmarkRead(bookmark) {
     fetch('/read/' + bookmark.id.toString() + '/?latest=' + bookmark.latest.toString())
-    bookmarks_container = document.getElementById('bookmarks-ul');
-    bookmark_container = document.getElementById('bookmark-' + bookmark.id.toString());
+    const bookmarks_container = document.getElementById('bookmarks-ul');
+    const bookmark_container = document.getElementById('bookmark-' + bookmark.id.toString());
     bookmarks_container.append(bookmark_container);
     bookmark_container.getElementsByTagName('a')[0].href = bookmark.link;
     bookmark_container.getElementsByClassName('new-chapter')[0].classList.remove('new-chapter');
     bookmark_container.getElementsByClassName('chapter')[0].innerHTML = 'Last Read: ' + bookmark.latest.toString();
+}
+
+function deleteBookmark(bookmark) {
+    fetch('/delete/' + bookmark.id.toString())
+    const bookmark_container = document.getElementById('bookmark-' + bookmark.id.toString());
+    bookmark_container.remove()
 }
 
 function FilterBookmarks() {
@@ -20,8 +26,8 @@ function FilterBookmarks() {
     const li = ul.getElementsByTagName('li');
 
     for (let i = 0; i < li.length; i++) {
-        title = li[i].getElementsByClassName('title')[0]
-        txtValue = title.innerText;
+        const title = li[i].getElementsByClassName('title')[0]
+        const txtValue = title.innerText;
         if (txtValue.toUpperCase().indexOf(filterValue) > -1) {
             li[i].style.display = "";
         } else {
@@ -50,6 +56,8 @@ function createBookmark(bookmark) {
     const edit_button = document.createElement('a')
     const edit_text = document.createTextNode('Edit')
 
+
+
     parent.appendChild(li)
     li.appendChild(a)
     a.appendChild(title_div)
@@ -63,35 +71,52 @@ function createBookmark(bookmark) {
     li.appendChild(settings_toggle)
     settings_toggle.appendChild(settings_text)
     li.appendChild(settings)
-    settings.appendChild(delete_button)
-    delete_button.appendChild(delete_text)
     settings.appendChild(edit_button)
     edit_button.appendChild(edit_text)
+    settings.appendChild(delete_button)
+    delete_button.appendChild(delete_text)
+
+
 
     li.classList.add("bookmark")
     li.classList.add("clearfix")
     li.id = "bookmark-" + bookmark.id.toString()
+
     a.classList.add('clearfix')
-    a.addEventListener('click', () => { updateBookmarkRead(bookmark); return false; })
     a.href = bookmark.latest_link
     a.target = "_blank"
+    a.addEventListener('click', () => {
+        updateBookmarkRead(bookmark);
+        return false;
+    })
+
     title_div.classList.add('title-div')
     title.classList.add('title')
+
     para.classList.add('latest')
+
     last.classList.add('last')
+
     last_chapter.classList.add('chapter')
+
     settings_toggle.classList.add('menu-toggle')
+    settings.classList.add('menu')
+    settings.classList.add('hidden')
+    settings.id = 'menu-' + bookmark.id.toString()
     settings_toggle.addEventListener('click', () => {
         toggleMenu(bookmark.id);
         return false;
     });
-    settings.classList.add('menu')
-    settings.classList.add('hidden')
-    settings.id = 'menu-' + bookmark.id.toString()
-    delete_button.classList.add('settings')
-    delete_button.href = '/delete/' + bookmark.id.toString()
+
     edit_button.classList.add('settings')
     edit_button.href = '/edit/' + bookmark.id.toString()
+
+    delete_button.classList.add('settings')
+    delete_button.href = ''
+    delete_button.addEventListener('click', () => {
+        deleteBookmark(bookmark);
+        return false;
+    });
 
     if (bookmark.latest > bookmark.chapter) {
         title_div.classList.add('new-chapter')
