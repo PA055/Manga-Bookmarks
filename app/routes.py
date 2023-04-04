@@ -52,6 +52,7 @@ def read(id):
     else:
         latest = request.args.get('latest')
 
+    print(latest)
     if latest is None:
         latest = 0
 
@@ -59,4 +60,3 @@ def read(id):
     db.session.commit()
 
     return redirect(url_for('index'))
-

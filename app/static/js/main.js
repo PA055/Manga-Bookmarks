@@ -4,14 +4,7 @@ function toggleMenu(id) {
 }
 
 function updateBookmarkRead(bookmark) {
-    fetch('/read/' + bookmark.id.toString(), {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ "latest": bookmark.latest })
-    })
+    fetch('/read/' + bookmark.id.toString() + '/?latest=' + bookmark.latest.toString())
     bookmarks_container = document.getElementById('bookmarks-ul');
     bookmark_container = document.getElementById('bookmark-' + bookmark.id.toString());
     bookmarks_container.append(bookmark_container);
@@ -110,13 +103,16 @@ function createBookmark(bookmark) {
 
 
 async function getBookmarks(api_url) {
-    let bookmarks = await fetch(api_url)
-    let json = await bookmarks.json()
-    console.log(json)
-    json.sort((a, b) => b.num_new_chapters - a.num_new_chapters)
-    json.forEach(bookmark => {
-        createBookmark(bookmark)
-    });
+    try {
+        let bookmarks = await fetch(api_url)
+        let json = await bookmarks.json()
+        json.sort((a, b) => b.num_new_chapters - a.num_new_chapters)
+        json.forEach(bookmark => {
+            createBookmark(bookmark)
+        });
+    } catch (error) {
+        document.getElementById('error').style.display = ''
+    }
     document.getElementById('loading').style.display = 'none'
 }
 
