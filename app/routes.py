@@ -14,7 +14,6 @@ def index():
 def new():
     form = BookmarkForm(status = 2)
     if form.validate_on_submit():
-        print(form.status.data)
         bkmrk = Bookmark(mname=form.mname.data, link=form.link.data, chapter=form.chapter.data, status=form.status.data)
         db.session.add(bkmrk)
         db.session.commit()
@@ -56,7 +55,6 @@ def read(id):
     else:
         latest = request.args.get('latest')
 
-    print(latest)
     if latest is None:
         latest = 0
 

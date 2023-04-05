@@ -4,13 +4,16 @@ function toggleMenu(id) {
 }
 
 function updateBookmarkRead(bookmark) {
+    // if (localStorage.getItem('updateAuto') == 'true') {
     fetch('/read/' + bookmark.id.toString() + '/?latest=' + bookmark.latest.toString())
+    // }
     const bookmarks_container = document.getElementById('bookmarks-ul');
     const bookmark_container = document.getElementById('bookmark-' + bookmark.id.toString());
     bookmarks_container.append(bookmark_container);
     bookmark_container.getElementsByTagName('a')[0].href = bookmark.link;
     bookmark_container.getElementsByClassName('new-chapter')[0].classList.remove('new-chapter');
     bookmark_container.getElementsByClassName('chapter')[0].innerHTML = 'Last Read: ' + bookmark.latest.toString();
+
 }
 
 function deleteBookmark(bookmark) {
@@ -86,7 +89,7 @@ function createBookmark(bookmark) {
     a.href = bookmark.latest_link
     a.target = "_blank"
     a.addEventListener('click', () => {
-        updateBookmarkRead(bookmark);
+        setTimeout(() => { updateBookmarkRead(bookmark); }, 500);
         return false;
     })
 
@@ -140,6 +143,10 @@ function addProxy(proxy) {
 
 
 async function getBookmarks(api_url) {
+    const bookmarks_container = document.getElementsByClassName('bookmark')
+    for (let i = 0; i < bookmarks_container.length;) {
+        bookmarks_container[i].remove()
+    }
     try {
         let bookmarks = await fetch(api_url)
         let json = await bookmarks.json()
@@ -159,10 +166,6 @@ async function displayBookmarks(status) {
     document.getElementById('tab-' + status.toString()).classList.add('selected')
     document.getElementById('loading').style.display = ''
     document.getElementById('error').style.display = 'none'
-    const bookmarks = document.getElementsByClassName('bookmark')
-    for (let i = 0; i < bookmarks.length;) {
-        bookmarks[i].remove()
-    }
     if (status == -1) {
         await getBookmarks('/api/all')
     } else {
