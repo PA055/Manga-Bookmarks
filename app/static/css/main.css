@@ -252,11 +252,12 @@ h1 {
 
 #settings-general {
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     width: 150px;
     height: 50px;
-    margin: 20px;
+    margin: 0px;
     background-color: inherit;
     border: none;
     color: #555;
@@ -265,7 +266,7 @@ h1 {
 
 #general-settings-menu {
     position: absolute;
-    top: 65px;
+    top: 45px;
     right: 10px;
     width: fit-content;
     height: 60px;

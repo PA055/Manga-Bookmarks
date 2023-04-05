@@ -128,6 +128,7 @@ function createBookmark(bookmark) {
 
 
 function addProxy(proxy) {
+    localStorage.setItem('proxy', proxy)
     const bookmarks = document.getElementsByClassName('bookmark')
     for (let i = 0; i < bookmarks.length; i++) {
         const bk = bookmarks[i]
@@ -166,6 +167,9 @@ async function displayBookmarks(status) {
         await getBookmarks('/api/all')
     } else {
         await getBookmarks('/api/status/' + status.toString())
+    }
+    if (localStorage.getItem('proxy') != null) {
+        addProxy(localStorage.getItem('proxy'))
     }
 }
 
