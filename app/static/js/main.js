@@ -127,6 +127,17 @@ function createBookmark(bookmark) {
 }
 
 
+function addProxy(proxy) {
+    const bookmarks = document.getElementsByClassName('bookmark')
+    for (let i = 0; i < bookmarks.length; i++) {
+        const bk = bookmarks[i]
+        const a = bk.getElementsByTagName('a')[0]
+        site = a.href
+        a.href = proxy + site
+    }
+}
+
+
 async function getBookmarks(api_url) {
     try {
         let bookmarks = await fetch(api_url)
@@ -141,13 +152,14 @@ async function getBookmarks(api_url) {
     document.getElementById('loading').style.display = 'none'
 }
 
+
 async function displayBookmarks(status) {
     document.getElementsByClassName('selected')[0].classList.remove('selected')
     document.getElementById('tab-' + status.toString()).classList.add('selected')
     document.getElementById('loading').style.display = ''
     document.getElementById('error').style.display = 'none'
-    bookmarks = document.getElementsByClassName('bookmark')
-    for (let i = 0; i < bookmarks.length; i++) {
+    const bookmarks = document.getElementsByClassName('bookmark')
+    for (let i = 0; i < bookmarks.length;) {
         bookmarks[i].remove()
     }
     if (status == -1) {

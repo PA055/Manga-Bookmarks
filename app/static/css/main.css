@@ -192,8 +192,8 @@ h1 {
     width: 50px;
 }
 
-.bookmark .hidden {
-    display: none;
+.hidden {
+    display: none !important;
 }
 
 #loading {
@@ -248,6 +248,43 @@ h1 {
     width: 100%;
     padding-left: unset;
     margin: 5px 0px;
+}
+
+#settings-general {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+    background-color: inherit;
+    border: none;
+    color: #555;
+    font-size: 30px;
+}
+
+#general-settings-menu {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    width: fit-content;
+    height: 60px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#proxy {
+    height: 20px;
+    border-radius: 5px;
+    background-color: #777;
+    border: 2px solid black;
+}
+
+#apply-settings {
+    height: 25px;
+    border-radius: 5px;
+    background-color: #777;
 }
 
 .errors li {

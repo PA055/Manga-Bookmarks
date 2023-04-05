@@ -22,6 +22,12 @@
     <h1>Your Bookmarks</h1>
     <a href="{{ url_for('new') }}" class="button">Add a new bookmark</a>
 
+    <button id="settings-general" onclick="document.getElementById('general-settings-menu').classList.toggle('hidden')">Settings</button>
+    <div id="general-settings-menu" class="hidden">
+      <input type="text" id="proxy" placeholder="Proxy: None">
+      <button id="apply-settings" onclick="addProxy(document.getElementById('proxy').value)">Apply</button>
+    </div>
+
     <div id="tabs">
       <button id="tab--1" onclick="displayBookmarks(-1);">All</button>
       <button id="tab-2" class="selected" onclick="displayBookmarks(2);">Reading</button>
