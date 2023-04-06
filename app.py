@@ -6,4 +6,4 @@ import uvicorn
 
 
 if __name__ == '__main__':
-    uvicorn.run(api_app, port=80)
+    uvicorn.run(api_app, host='0.0.0.0', port=8080)
