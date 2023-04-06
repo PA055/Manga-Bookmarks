@@ -33,7 +33,7 @@ def index():
 def new():
     if not request.cookies.get('id'):
         return redirect(url_for('login'))
-    if request.cookies.get != USER_ID:
+    if request.cookies.get('id') != USER_ID:
         return redirect(url_for('invalidUser'))
     
     form = BookmarkForm(status = 2)
@@ -49,7 +49,7 @@ def new():
 def delete(id):
     if not request.cookies.get('id'):
         return redirect(url_for('login'))
-    if request.cookies.get != USER_ID:
+    if request.cookies.get('id') != USER_ID:
         return redirect(url_for('invalidUser'))
     
     bkmrk = Bookmark.query.get_or_404(id)
@@ -62,7 +62,7 @@ def delete(id):
 def edit(id):
     if not request.cookies.get('id'):
         return redirect(url_for('login'))
-    if request.cookies.get != USER_ID:
+    if request.cookies.get('id') != USER_ID:
         return redirect(url_for('invalidUser'))
     
     form = BookmarkForm()
@@ -85,7 +85,7 @@ def edit(id):
 def read(id):
     if not request.cookies.get('id'):
         return redirect(url_for('login'))
-    if request.cookies.get != USER_ID:
+    if request.cookies.get('id') != USER_ID:
         return redirect(url_for('invalidUser'))
     
     bk = Bookmark.query.get_or_404(id)
