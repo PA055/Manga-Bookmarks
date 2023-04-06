@@ -19,7 +19,6 @@ def invalidUser():
 
 @app.route('/')
 def index():
-    print(type(request.cookies.get('id')), request.cookies.get('id'))
     if not request.cookies.get('id'):
         return redirect(url_for('login'))
     if request.cookies.get('id') != USER_ID:
