@@ -150,6 +150,7 @@ async function getBookmarks(api_url) {
     try {
         let bookmarks = await fetch(api_url)
         let json = await bookmarks.json()
+        // shuffle the json array
         json.sort((a, b) => b.num_new_chapters - a.num_new_chapters)
         json.forEach(bookmark => {
             createBookmark(bookmark)

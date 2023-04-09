@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,6 +10,7 @@
     <title>New Bookmark</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
+
   <body>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -33,22 +35,5 @@
       {{ form.submit(class_="input") }}
 
     </form>
-
-
-    <!-- <form id="newBookmark" onsubmit="" action="{{ url_for('index') }}">
-        <label for="mname" class="label for-mname">Manga Name:</label>
-        <input type="text" id="mname" name="mname" class="input">
-        <br>
-        <label for="link" class="label for-link">Manga Link:</label>
-        <input type="url" id="link" name="link" class="input">
-        <br>
-        <label for="chapter" class="label for-chapter">Current Chapter:</label>
-        <input type="number" id="chapter" name="chapter" class="input">
-        <br>
-        <br>
-        <input type="submit" value="CREATE" id="submit" class="input">
-    </form> -->
-
-    <!-- <script src="./bookmarks.js"></script> -->
   </body>
 </html>
