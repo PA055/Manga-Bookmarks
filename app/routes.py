@@ -3,38 +3,54 @@ from app.forms import *
 from app.models import *
 from app.helper import *
 from app import app, USER_ID
+import random
 
 @app.route('/login')
 def login():
     if not request.headers['X-Replit-User-Id']:
         return render_template('replitAuth.html')
     resp = make_response(redirect(url_for('index')))
-    resp.set_cookie('id', request.headers['X-Replit-User-Id'])        
-    
+    resp.set_cookie('id', request.headers['X-Replit-User-Id'])
+
     return resp
 
 @app.route('/invalid-user')
 def invalidUser():
     return f"Fork This repl and change the USER_ID variable in ./app/__init__.py to be your replit ID: {request.cookies.get('id')}"
 
+
+@app.route('/offline.js')
+def offlineJS():
+    return app.send_static_file('js/offline.js')
+
+
+@app.route('/offline')
+def offline():
+    bookmarks = Bookmark.query.filter(Bookmark.status == 2).all()
+    random.shuffle(bookmarks)
+    return render_template('offline.html', bookmarks = bookmarks)
+
+
+
+
 @app.route('/')
 def index():
-    if not request.cookies.get('id'):
-        return redirect(url_for('login'))
-    if request.cookies.get('id') != USER_ID:
-        return redirect(url_for('invalidUser'))
-    
+    # if not request.cookies.get('id'):
+    #     return redirect(url_for('login'))
+    # if request.cookies.get('id') != USER_ID:
+    #     return redirect(url_for('invalidUser'))
+
     return render_template('index.html')
-    
+
 
 
 @app.route('/new', methods=['GET', 'POST'])
 def new():
-    if not request.cookies.get('id'):
-        return redirect(url_for('login'))
-    if request.cookies.get('id') != USER_ID:
-        return redirect(url_for('invalidUser'))
-    
+    # if not request.cookies.get('id'):
+    #     return redirect(url_for('login'))
+    # if request.cookies.get('id') != USER_ID:
+    #     return redirect(url_for('invalidUser'))
+
     form = BookmarkForm(status = 2)
     if form.validate_on_submit():
         bkmrk = Bookmark(mname=form.mname.data, link=form.link.data, chapter=form.chapter.data, status=form.status.data)
@@ -46,11 +62,11 @@ def new():
 
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def delete(id):
-    if not request.cookies.get('id'):
-        return redirect(url_for('login'))
-    if request.cookies.get('id') != USER_ID:
-        return redirect(url_for('invalidUser'))
-    
+    # if not request.cookies.get('id'):
+    #     return redirect(url_for('login'))
+    # if request.cookies.get('id') != USER_ID:
+    #     return redirect(url_for('invalidUser'))
+
     bkmrk = Bookmark.query.get_or_404(id)
     db.session.delete(bkmrk)
     db.session.commit()
@@ -59,11 +75,11 @@ def delete(id):
 
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id):
-    if not request.cookies.get('id'):
-        return redirect(url_for('login'))
-    if request.cookies.get('id') != USER_ID:
-        return redirect(url_for('invalidUser'))
-    
+    # if not request.cookies.get('id'):
+    #     return redirect(url_for('login'))
+    # if request.cookies.get('id') != USER_ID:
+    #     return redirect(url_for('invalidUser'))
+
     form = BookmarkForm()
     bkmrk = Bookmark.query.get_or_404(id)
     if form.validate_on_submit():
@@ -82,11 +98,11 @@ def edit(id):
 
 @app.route('/read/<int:id>/', methods=['GET', 'POST'])
 def read(id):
-    if not request.cookies.get('id'):
-        return redirect(url_for('login'))
-    if request.cookies.get('id') != USER_ID:
-        return redirect(url_for('invalidUser'))
-    
+    # if not request.cookies.get('id'):
+    #     return redirect(url_for('login'))
+    # if request.cookies.get('id') != USER_ID:
+    #     return redirect(url_for('invalidUser'))
+
     bk = Bookmark.query.get_or_404(id)
     if request.method == 'POST':
         latest = request.values.get('latest')

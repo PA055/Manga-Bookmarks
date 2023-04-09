@@ -177,5 +177,14 @@ async function displayBookmarks(status) {
     }
 }
 
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        this.navigator.serviceWorker.register('./offline.js').then(function(reg) {
+            console.log('Service Worker registration was successful with scope: ', reg.scope);
+        }, function(err) {
+            console.log('Service Worker registration failed: ', err);
+        });
+    });
+}
 
 displayBookmarks(2)

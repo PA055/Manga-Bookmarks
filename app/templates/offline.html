@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>New Bookmark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://kit.fontawesome.com/ca4593bb62.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Your Bookmarks</h1>
+    <a href="{{ url_for('new') }}" class="button">Add a new bookmark</a>
+
+    <button id="settings-general" onclick="document.getElementById('general-settings-menu').classList.toggle('hidden')">Settings</button>
+    <div id="general-settings-menu" class="hidden">
+      <input type="text" id="proxy" placeholder="Proxy: None">
+      <button id="apply-settings" onclick="addProxy(document.getElementById('proxy').value)">Apply</button>
+    </div>
+
+    <div id="tabs">
+      <button id="tab--1" onclick="alert('You Are Offline');">All</button>
+      <button id="tab-2" class="selected" onclick="alert('You Are Offline');">Reading</button>
+      <button id="tab-1" onclick="alert('You Are Offline');">On Hold</button>
+      <button id="tab-0" onclick="alert('You Are Offline');">To Read</button>
+    </div>
+
+    <input type="text" id="bookmarks-search" onkeyup="FilterBookmarks()" placeholder="Search for mangas..">
+
+    <div id="bookmarks">
+      <ul id="bookmarks-ul">
+        {% for bookmark in bookmarks %}
+            <li class="bookmark clearfix" id="bookmark-{{ bookmark.id }}">
+                <a class="clearfix" href="{{ bookmark.link }}" target="_blank">
+                    <div class="title-div">
+                        <h3 class="title">{{ bookmark.mname }}</h3>
+                        <p class="latest">Latest Chapter: ??</p>
+                    </div>
+                    <div class="last">
+                        <span class="chapter">Last Read: Chapter {{ bookmark.chapter }}</span>
+                    </div>
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu({{ bookmark.id }})">≡</button>
+                <div class="menu hidden" id="menu-{{ bookmark.id }}">
+                    <a class="settings" onclick="alert('You Are Offline');">Edit</a>
+                    <a class="settings" onclick="alert('You Are Offline');">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+  <script>
+    function toggleMenu(id) {
+        let menu = document.getElementById('menu-' + id.toString());
+        menu.classList.toggle('hidden');
+    }
+
+    function FilterBookmarks() {
+        const input = document.getElementById('bookmarks-search');
+        const filterValue = input.value.toUpperCase();
+        const ul = document.getElementById('bookmarks-ul');
+        const li = ul.getElementsByTagName('li');
+
+        for (let i = 0; i < li.length; i++) {
+            const title = li[i].getElementsByClassName('title')[0]
+            const txtValue = title.innerText;
+            if (txtValue.toUpperCase().indexOf(filterValue) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+  </script>
+</body>
+</html>
