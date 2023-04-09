@@ -3,6 +3,24 @@ body {
     color: white
 }
 
+#replit-login-button {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 75px);
+}
+
+#replit-login-button button.replit-auth-button {
+    height: 50px;
+    width: 150px;
+    background-color: blue;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+#replit-login-button button.replit-auth-button:hover {
+    background-color: #00a;
+}
+
 h1 {
     width: 100%;
     text-align: center;

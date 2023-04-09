@@ -68,7 +68,7 @@ async def main(db: Session = Depends(app.get_db)):
 
 
 @app.api_app.get('/api/status/{status}')
-async def main(status: int, db: Session = Depends(app.get_db)):
+async def status(status: int, db: Session = Depends(app.get_db)):
     session = AsyncHTMLSession()
     bookmarks = api_models.get_bookmarks_by_status(db, status)
 

@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from fastapi.middleware.wsgi import WSGIMiddleware
 from app.api_db import Base, engine, SessionLocal
 
+USER_ID = '3632971'
 
 Base.metadata.create_all(bind=engine)
 
