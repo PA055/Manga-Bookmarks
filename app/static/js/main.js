@@ -49,7 +49,7 @@ function createBookmark(bookmark) {
     const title = document.createElement('h3')
     const tnode = document.createTextNode(bookmark.mname)
     const span = document.createElement('span')
-    const snode = document.createTextNode('(' + bookmark.site + ')')
+    const snode = document.createTextNode(' (' + bookmark.site + ')')
     const para = document.createElement('p')
     const pnode = document.createTextNode('Latest Chapter: Chapter ' + bookmark.latest)
     const last = document.createElement('div')
