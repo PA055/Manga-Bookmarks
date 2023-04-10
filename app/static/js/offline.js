@@ -1,8 +1,11 @@
 var CACHE_NAME = 'offline-cache';
 var urlsToCache = [
+    '/',
+    '/new',
     '/offline',
     '/static/css/main.css',
     '/static/js/main.js',
+    '/static/img/searchicon.png',
 ];
 
 self.addEventListener('install', function(event) {
@@ -18,13 +21,14 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     console.log('I am a request with url:', event.request.clone().url)
     event.respondWith(caches.match(event.request).then(function(response) {
-        if (response) {
-            return response;
-        }
         try {
             return fetch(event.request);
         } catch (err) {
-            window.location.href = '/offline'
+            if (response) {
+                return response;
+            } else {
+                window.location.href = '/offline';
+            }
         }
     }));
 });

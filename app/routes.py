@@ -35,10 +35,10 @@ def offline():
 
 @app.route('/')
 def index():
-    # if not request.cookies.get('id'):
-    #     return redirect(url_for('login'))
-    # if request.cookies.get('id') != USER_ID:
-    #     return redirect(url_for('invalidUser'))
+    if not request.cookies.get('id'):
+        return redirect(url_for('login'))
+    if request.cookies.get('id') != USER_ID:
+        return redirect(url_for('invalidUser'))
 
     return render_template('index.html')
 
@@ -46,10 +46,10 @@ def index():
 
 @app.route('/new', methods=['GET', 'POST'])
 def new():
-    # if not request.cookies.get('id'):
-    #     return redirect(url_for('login'))
-    # if request.cookies.get('id') != USER_ID:
-    #     return redirect(url_for('invalidUser'))
+    if not request.cookies.get('id'):
+        return redirect(url_for('login'))
+    if request.cookies.get('id') != USER_ID:
+        return redirect(url_for('invalidUser'))
 
     form = BookmarkForm(status = 2)
     if form.validate_on_submit():
@@ -62,10 +62,10 @@ def new():
 
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def delete(id):
-    # if not request.cookies.get('id'):
-    #     return redirect(url_for('login'))
-    # if request.cookies.get('id') != USER_ID:
-    #     return redirect(url_for('invalidUser'))
+    if not request.cookies.get('id'):
+        return redirect(url_for('login'))
+    if request.cookies.get('id') != USER_ID:
+        return redirect(url_for('invalidUser'))
 
     bkmrk = Bookmark.query.get_or_404(id)
     db.session.delete(bkmrk)
@@ -75,10 +75,10 @@ def delete(id):
 
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id):
-    # if not request.cookies.get('id'):
-    #     return redirect(url_for('login'))
-    # if request.cookies.get('id') != USER_ID:
-    #     return redirect(url_for('invalidUser'))
+    if not request.cookies.get('id'):
+        return redirect(url_for('login'))
+    if request.cookies.get('id') != USER_ID:
+        return redirect(url_for('invalidUser'))
 
     form = BookmarkForm()
     bkmrk = Bookmark.query.get_or_404(id)
@@ -98,10 +98,10 @@ def edit(id):
 
 @app.route('/read/<int:id>/', methods=['GET', 'POST'])
 def read(id):
-    # if not request.cookies.get('id'):
-    #     return redirect(url_for('login'))
-    # if request.cookies.get('id') != USER_ID:
-    #     return redirect(url_for('invalidUser'))
+    if not request.cookies.get('id'):
+        return redirect(url_for('login'))
+    if request.cookies.get('id') != USER_ID:
+        return redirect(url_for('invalidUser'))
 
     bk = Bookmark.query.get_or_404(id)
     if request.method == 'POST':
