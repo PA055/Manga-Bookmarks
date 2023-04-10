@@ -2,10 +2,14 @@ from fastapi import Depends
 from enum import Enum
 from requests_html import AsyncHTMLSession
 from requests.structures import CaseInsensitiveDict
+from requests.exceptions import ConnectTimeout, ConnectionError
 from sqlalchemy.orm import Session
 import asyncio, app
 from app import api_models, helper
 
+
+async def fallback(bookmark):
+     return {'id': bookmark.id, 'link': bookmark.link, 'chapter': '??', 'num_chapters': 0}
 
 async def nitro(session, bookmark):
     # r = await session.get(bookmark.link)
@@ -16,7 +20,10 @@ async def nitro(session, bookmark):
     headers["Content-Type"] = "application/json"
     headers["Content-Length"] = "0"
     # chr = await session.post(manga['base_url'] + 'ajax/chapters/', headers=headers)
-    chr = await session.post(bookmark.link + 'ajax/chapters/', headers=headers)
+    try:
+        chr = await session.post(bookmark.link + 'ajax/chapters/', headers=headers)
+    except (ConnectTimeout, ConnectionError):
+        return await fallback(bookmark)
     # print(Fore.GREEN + f'query 2 for {bookmark.link}' + Fore.RESET)
     chapters = [c for c in chr.html.find('li.wp-manga-chapter a')]
     # print(*["'" + c.text + "'" for c in chapters], sep=', ')
@@ -27,10 +34,16 @@ async def nitro(session, bookmark):
     return {'id': bookmark.id, 'link': min(olderChapters, key=lambda a: helper.get_chapter_number(a.text)).attrs['href'], 'chapter': helper.clean_float(helper.get_chapter_number(max(chapters, key=lambda a: helper.get_chapter_number(a.text)).text)), 'num_chapters': len(olderChapters)}
 
 async def manga(session, bookmark):
-    r = await session.get(bookmark.link)
+    try:
+        r = await session.get(bookmark.link)
+    except (ConnectTimeout, ConnectionError):
+        return await fallback(bookmark)
     # print(Fore.GREEN + f'query 1 for {bookmark.link}' + Fore.RESET)
     xml = r.html.find('link[title="RSS Feed"]', first=True).attrs['href']
-    xmlr = await session.get(xml)
+    try:
+        xmlr = await session.get(xml)
+    except (ConnectTimeout, ConnectionError):
+        return await fallback(bookmark)
     # print(Fore.GREEN + f'query 2 for {bookmark.link}' + Fore.RESET)
     chapters = [i.text.split('\n') for i in xmlr.html.find("item")]
     # print(*["'" + c[0] + "'" for c in chapters], sep=', ')
@@ -63,7 +76,10 @@ async def main(db: Session = Depends(app.get_db)):
         'chapter': helper.clean_float(i.chapter),
         'latest': helper.clean_float(updates[i.id]['chapter']),
         'latest_link': updates[i.id]['link'],
-        'num_new_chapters': updates[i.id]['num_chapters']
+        'num_new_chapters': updates[i.id]['num_chapters'],
+        'site': "Manga4Life" if 'https://manga4life.com/' in i.link else (
+                "Nitro Scans" if 'https://nitroscans.com/' in i.link else (
+                "Unknown"))
     } for i in bookmarks]
 
 
@@ -75,7 +91,7 @@ async def status(status: int, db: Session = Depends(app.get_db)):
     results = await asyncio.gather(*(
         manga(session, bookmark) if 'https://manga4life.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark.link else (
-        nitro(session, bookmark)))
+        fallback(bookmark)))
         for bookmark in bookmarks))
 
     updates = {}
@@ -90,5 +106,8 @@ async def status(status: int, db: Session = Depends(app.get_db)):
         'chapter': helper.clean_float(i.chapter),
         'latest': helper.clean_float(updates[i.id]['chapter']),
         'latest_link': updates[i.id]['link'],
-        'num_new_chapters': updates[i.id]['num_chapters']
+        'num_new_chapters': updates[i.id]['num_chapters'],
+        'site': "Manga4Life" if 'https://manga4life.com/' in i.link else (
+                "Nitro Scans" if 'https://nitroscans.com/' in i.link else (
+                "Unknown"))
     } for i in bookmarks]

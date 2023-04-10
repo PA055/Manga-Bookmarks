@@ -19,20 +19,6 @@ def invalidUser():
     return f"Fork This repl and change the USER_ID variable in ./app/__init__.py to be your replit ID: {request.cookies.get('id')}"
 
 
-@app.route('/offline.js')
-def offlineJS():
-    return app.send_static_file('js/offline.js')
-
-
-@app.route('/offline')
-def offline():
-    bookmarks = Bookmark.query.filter(Bookmark.status == 2).all()
-    random.shuffle(bookmarks)
-    return render_template('offline.html', bookmarks = bookmarks)
-
-
-
-
 @app.route('/')
 def index():
     # if not request.cookies.get('id'):

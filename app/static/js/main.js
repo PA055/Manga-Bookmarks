@@ -43,6 +43,8 @@ function createBookmark(bookmark) {
     const parent = document.getElementById('bookmarks-ul')
     const li = document.createElement("li")
     const a = document.createElement("a")
+    const bookmarkObject = document.createElement("p");
+    const bookmarkJSON = document.createTextNode(JSON.stringify(bookmark))
     const title_div = document.createElement('div')
     const title = document.createElement('h3')
     const tnode = document.createTextNode(bookmark.mname)
@@ -62,6 +64,8 @@ function createBookmark(bookmark) {
 
 
     parent.appendChild(li)
+    li.appendChild(bookmarkObject)
+    bookmarkObject.appendChild(bookmarkJSON)
     li.appendChild(a)
     a.appendChild(title_div)
     title_div.appendChild(title)
@@ -84,6 +88,8 @@ function createBookmark(bookmark) {
     li.classList.add("bookmark")
     li.classList.add("clearfix")
     li.id = "bookmark-" + bookmark.id.toString()
+
+    bookmarkObject.style.display = "none"
 
     a.classList.add('clearfix')
     a.href = bookmark.latest_link
@@ -148,8 +154,11 @@ async function getBookmarks(api_url) {
         bookmarks_container[i].remove()
     }
     try {
+        console.log('before fetching bookmarks')
         let bookmarks = await fetch(api_url)
+        console.log('fetched bookmarks')
         let json = await bookmarks.json()
+        console.log('found json:', json)
         // shuffle the json array
         json.sort((a, b) => b.num_new_chapters - a.num_new_chapters)
         json.forEach(bookmark => {
@@ -170,6 +179,7 @@ async function displayBookmarks(status) {
     if (status == -1) {
         await getBookmarks('/api/all')
     } else {
+        console.log('getting bookmarks at '  + '/api/status/' + status.toString())
         await getBookmarks('/api/status/' + status.toString())
     }
     if (localStorage.getItem('proxy') != null) {
@@ -177,14 +187,18 @@ async function displayBookmarks(status) {
     }
 }
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        this.navigator.serviceWorker.register('./offline.js').then(function(reg) {
-            console.log('Service Worker registration was successful with scope: ', reg.scope);
-        }, function(err) {
-            console.log('Service Worker registration failed: ', err);
-        });
-    });
-}
-
+console.log('js loaded')
 displayBookmarks(2)
+
+
+
+// if ('serviceWorker' in navigator) {
+    // window.addEventListener('load', function() {
+        // this.navigator.serviceWorker.register('./offline.js').then(function(reg) {
+            // console.log('Service Worker registration was successful with scope: ', reg.scope);
+        // }, function(err) {
+            // console.log('Service Worker registration failed: ', err);
+        // });
+    // });
+// }
+
