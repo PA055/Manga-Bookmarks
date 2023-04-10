@@ -2,9 +2,8 @@ var CACHE_NAME = 'offline-cache';
 var urlsToCache = [
     '/',
     '/new',
-    '/offline',
-    '/static/css/main.css',
     '/static/js/main.js',
+    '/static/css/main.css',
     '/static/img/searchicon.png',
 ];
 

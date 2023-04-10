@@ -30,8 +30,18 @@ async def nitro(session, bookmark):
     olderChapters = [c for c in chapters if helper.get_chapter_number(c.text) > bookmark.chapter]
     # print(Fore.YELLOW + f'finish for {bookmark.link}' + Fore.RESET)
     if len(olderChapters) == 0:
-            return {'id': bookmark.id, 'link': bookmark.link, 'chapter': bookmark.chapter, 'num_chapters': 0}
-    return {'id': bookmark.id, 'link': min(olderChapters, key=lambda a: helper.get_chapter_number(a.text)).attrs['href'], 'chapter': helper.clean_float(helper.get_chapter_number(max(chapters, key=lambda a: helper.get_chapter_number(a.text)).text)), 'num_chapters': len(olderChapters)}
+            return {
+                'id': bookmark.id,
+                'link': bookmark.link,
+                'chapter': bookmark.chapter,
+                'num_chapters': 0
+            }
+    return {
+        'id': bookmark.id,
+        'link': min(olderChapters, key=lambda a: helper.get_chapter_number(a.text)).attrs['href'],
+        'chapter': helper.clean_float(helper.get_chapter_number(max(chapters, key=lambda a: helper.get_chapter_number(a.text)).text)),
+        'num_chapters': len(olderChapters)
+    }
 
 async def manga(session, bookmark):
     try:
@@ -50,8 +60,19 @@ async def manga(session, bookmark):
     olderChapters = [c for c in chapters if helper.get_chapter_number(c[0]) > bookmark.chapter]
     # print(Fore.YELLOW + f'finish for {bookmark.link}' + Fore.RESET)
     if len(olderChapters) == 0:
-        return {'id': bookmark.id, 'link': bookmark.link, 'chapter': bookmark.chapter, 'num_chapters': 0}
-    return {'id': bookmark.id, 'link': min(olderChapters, key=lambda a: helper.get_chapter_number(a[0]))[1], 'chapter': helper.clean_float(helper.get_chapter_number(max(chapters, key=lambda a: helper.get_chapter_number(a[0]))[0])), 'num_chapters': len(olderChapters)}
+        return {
+            'id': bookmark.id,
+            'link': bookmark.link,
+            'chapter': bookmark.chapter,
+            'num_chapters': 0
+        }
+
+    return {
+        'id': bookmark.id,
+        'link': helper.clean_up(min(olderChapters, key=lambda a: helper.get_chapter_number(a[0]))[1]),
+        'chapter': helper.clean_float(helper.get_chapter_number(max(chapters, key=lambda a: helper.get_chapter_number(a[0]))[0])),
+        'num_chapters': len(olderChapters)
+    }
 
 @app.api_app.get('/api/all')
 async def main(db: Session = Depends(app.get_db)):

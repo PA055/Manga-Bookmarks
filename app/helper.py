@@ -8,3 +8,10 @@ def get_chapter_number(text):
         if text[i:].replace('.', '').isnumeric():
             return float(text[i:])
     return 0
+
+def clean_up(f):
+    if '-page-' in str(f) and '.html' in str(f):
+        idx = f.find('-page-')
+        return f[:idx] + f[-5:]
+    return f
+

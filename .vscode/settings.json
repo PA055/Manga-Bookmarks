@@ -25,5 +25,6 @@
     "vsintellicode.sql.completionsEnabled": false,
     "githubIssues.issueBranchTitle": "feature/${issueNumber}_${sanitizedIssueTitle}",
     "errorLens.messageEnabled": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "python.analysis.typeCheckingMode": "basic"
 }
