@@ -164,6 +164,10 @@ h1 {
     width: 1.5%;
 }
 
+.title span {
+    color: rgb(54, 54, 54) !important;
+}
+
 .bookmark .menu {
     display: block;
     position: absolute;

@@ -1,4 +1,6 @@
 def clean_float(f):
+    if not str(f)[:].replace('.', '').isnumeric():
+        return f
     return int(f) if float(f) == int(f) else float(f)
 
 def get_chapter_number(text):
