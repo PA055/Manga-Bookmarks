@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <title>New Bookmark</title>
+    <title> {% if new %} New {% else %} Edit {% endif %} Bookmark </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
 
@@ -23,8 +23,8 @@
     {% endwith %}
 
     <a href="{{ url_for('index') }}" class="back">back</a>
-    <h1 id="newTitle">New Bookmarks</h1>
-
+    <h1 id="newTitle"> {% if new %} New {% else %} Edit {% endif %} Bookmarks </h1>
+      
     <form id="newBookmark" method="post" novalidate>
       {{ form.hidden_tag() }}
 

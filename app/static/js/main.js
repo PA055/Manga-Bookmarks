@@ -93,7 +93,8 @@ function createBookmark(bookmark) {
     li.classList.add("clearfix");
     li.id = "bookmark-" + bookmark.id.toString();
 
-    bookmarkObject.style.display = "none"
+    bookmarkObject.style.display = "none";
+    bookmarkObject.classList.add("bookmarkJSON")
 
     a.classList.add('clearfix');
     a.href = bookmark.latest_link;
@@ -151,9 +152,9 @@ function addProxy(proxy) {
     const bookmarks = document.getElementsByClassName('bookmark');
     for (let i = 0; i < bookmarks.length; i++) {
         const bk = bookmarks[i];
+        const bkJSON = JSON.parse(bk.getElementsByClassName('bookmarkJSON')[0].innerText);
         const a = bk.getElementsByTagName('a')[0];
-        site = a.href;
-        a.href = proxy + site;
+        a.href = proxy + bkJSON.latest_link;
     }
 }
 
@@ -176,7 +177,7 @@ async function getBookmarks(api_url) {
         });
     } catch (error) {
         document.getElementById('error').style.display = '';
-        window.location.href = '/offline';
+        // window.location.href = '/offline';
     }
     document.getElementById('loading').style.display = 'none';
 }

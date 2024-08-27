@@ -7,6 +7,7 @@ import random
 
 @app.route('/login')
 def login():
+    return redirect(url_for('index'))
     if not request.headers['X-Replit-User-Id']:
         return render_template('replitAuth.html')
     resp = make_response(redirect(url_for('index')))
@@ -16,11 +17,15 @@ def login():
 
 @app.route('/invalid-user')
 def invalidUser():
+    return redirect(url_for('index'))
     return f"Fork This repl and change the USER_ID variable in ./app/__init__.py to be your replit ID: {request.cookies.get('id')}"
 
 
 @app.route('/')
 def index():
+    if random.randint(1, 10) == 1:
+        return redirect(url_for('backup'))
+
     # if not request.cookies.get('id'):
     #     return redirect(url_for('login'))
     # if request.cookies.get('id') != USER_ID:
@@ -43,7 +48,7 @@ def new():
         db.session.add(bkmrk)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('new.html', form=form)
+    return render_template('new.html', form=form, new=True)
 
 
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
@@ -74,12 +79,12 @@ def edit(id):
         bkmrk.chapter = form.chapter.data
         bkmrk.status = form.status.data
         db.session.commit()
-        return redirect(url_for('index'))
+        return f"<a href={url_for('index')}>Home</a>"
     form.mname.data = bkmrk.mname
     form.link.data = bkmrk.link
     form.chapter.data = clean_float(bkmrk.chapter)
     form.status.data = bkmrk.status
-    return render_template('new.html', form=form)
+    return render_template('new.html', form=form, new=False)
 
 
 @app.route('/read/<int:id>/', methods=['GET', 'POST'])
@@ -101,4 +106,39 @@ def read(id):
     bk.chapter = latest
     db.session.commit()
 
+    if random.randint(1, 10) == 1:
+        return redirect(url_for('backup'))
+    return "Done"
+
+
+@app.route('/backup')
+def backup():
+    bookmarks = Bookmark.query.all()
+    with open('./MangaBackup.md', 'w+') as f:
+        f.writelines([
+            f'[{bookmark.mname}]({bookmark.link}) -- {clean_float(bookmark.chapter)} -- {"Reading" if bookmark.status == 2 else ("On Hold" if bookmark.status == 1 else "To Read")}  \n'
+            for bookmark in bookmarks
+        ])
+
+    return redirect(url_for('index'))
+
+@app.route('/restore')
+@app.route('/recover')
+def restore():
+    Bookmark.query.delete()
+    with open('./MangaBackup.md', 'r') as f:
+        bookmarkLines = f.readlines()
+
+    # bookmarks = []
+    for bookmark in bookmarkLines:
+        linkedName, chapter, statusWord = bookmark.strip().split(' -- ')
+        mname = linkedName[1:linkedName.rfind(']')]
+        link = linkedName[linkedName.rfind('(')+1: -1]
+        status = 2 if statusWord == 'Reading' else (1 if statusWord == "On Hold" else 0)
+
+        bk = Bookmark(mname=mname, link=link, chapter=chapter, status=status)
+        # bookmarks.append(bk)
+        db.session.add(bk)
+
+    db.session.commit()
     return redirect(url_for('index'))
