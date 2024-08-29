@@ -1,0 +1,8 @@
+fastapi
+flask
+flask-migrate
+flask-sqlalchemy
+flask-wtf
+lxml[html_clean]
+requests-html
+uvicorn
