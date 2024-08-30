@@ -6,3 +6,4 @@ flask-wtf
 lxml[html_clean]
 requests-html
 uvicorn
+types-Flask-Migrate
