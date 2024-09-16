@@ -95,7 +95,7 @@
 [The Magical Revolution of the Reincarnated Princess and the Genius](https://manga4life.com/manga/The-Magical-Revolution-of-the-Reincarnated-Princess-and-the-Genius-Young-Lady) -- 40 -- On Hold  
 [I'm the Only Monster Tamer in the World and Was Mistaken for the Demon Lord](https://manga4life.com/manga/Sekai-de-Tadahitori-no-Mamono-Tsukai) -- 53.2 -- On Hold  
 [Made in Abyss](https://manga4life.com/manga/Made-In-Abyss) -- 60 -- On Hold  
-[Dungeon Reset](https://manga4life.com/manga/Dungeon-Reset) -- 212 -- Reading  
+[Dungeon Reset](https://manga4life.com/manga/Dungeon-Reset) -- 214 -- Reading  
 [Player From Today Onwards](https://manga4life.com/manga/Player-from-Today-Onwards) -- 81 -- On Hold  
 [A Warrior Exiled by the Hero and His Lover](https://manga4life.com/manga/A-Warrior-Exiled-by-the-Hero-and-His-Lover) -- 27 -- On Hold  
 [Isekai ni Teni Shitara Yama no Naka datta](https://manga4life.com/manga/Isekai-ni-Teni-Shitara-Yama-no-Naka-datta) -- 24 -- On Hold  
@@ -183,10 +183,10 @@
 [The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat](https://manga4life.com/manga/Sekai-Saikyou-no-Assassin-Isekai-Kizoku-ni-Tensei-Suru) -- 27 -- On Hold  
 [The Inferior Magic Swordsman](https://manga4life.com/manga/The-Reincarnated-Inferior-Magic-Swordsman) -- 93 -- On Hold  
 [Genkai Level 1 kara no Nariagari](https://manga4life.com/manga/Genkai-Level-1-kara-no-Nariagari) -- 33 -- On Hold  
-[Mission: Yozakura Family](https://manga4life.com/manga/Mission-Yozakura-Family) -- 241 -- Reading  
+[Mission: Yozakura Family](https://manga4life.com/manga/Mission-Yozakura-Family) -- 242 -- Reading  
 [The Irregular of the Royal Academy of Magic](https://manga4life.com/manga/The-Irregular-of-the-Royal-Academy-of-Magic) -- 59 -- Reading  
 [Heavenly Demon Instructor](https://manga4life.com/manga/Heavenly-Demon-Instructor) -- 105 -- Reading  
-[Overgeared](https://manga4life.com/manga/Overgeared) -- 247 -- Reading  
+[Overgeared](https://manga4life.com/manga/Overgeared) -- 248 -- Reading  
 [Campfire Cooking in Another World with my Absurd Skill](https://manga4life.com/manga/Tondemo-Skill-De-Isekai-Hourou-Meshi) -- 59.2 -- On Hold  
 [Solo Glitch Player](https://manga4life.com/manga/Solo-Bug-Player) -- 0 -- On Hold  
 [The Max Level Returner](https://manga4life.com/manga/Max-Level-Returner) -- 184 -- On Hold  
@@ -221,7 +221,7 @@
 [My Daughter is the Final Boss](https://nitroscans.com/series/my-daughter-is-the-final-boss/) -- 129 -- On Hold  
 [World’s Strongest Troll](https://manga4life.com/manga/Worlds-Strongest-Troll) -- 85 -- Reading  
 [Heir Of Mythical Heroes](https://nitroscans.com/series/heir-of-mythical-heroes/) -- 50 -- On Hold  
-[I Killed an Academy Player](https://nitroscans.com/series/i-killed-an-academy-player/) -- 49 -- Reading  
+[I Killed an Academy Player](https://nitroscans.com/series/i-killed-an-academy-player/) -- 50 -- Reading  
 [Regressing with the King’s Power](https://nitroscans.com/series/regressing-with-the-kings-power/) -- 47 -- On Hold  
 [Academy’s Genius Swordmaster](https://nitroscans.com/series/academy-s-genius-swordsman/) -- 23 -- On Hold  
 [No Game, No Life](https://manga4life.com/manga/No-Game-No-Life) -- 11 -- On Hold  
