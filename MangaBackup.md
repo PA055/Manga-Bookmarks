@@ -1,9 +1,9 @@
 [Return of the SSS-Class Ranker](https://nitroscans.com/series/return-of-the-sss-class-ranker) -- 120 -- Reading  
 [The Reincarnation of the Forbidden Archmage](https://nitroscans.com/series/the-reincarnation-of-the-forbidden-archmage/) -- 84 -- On Hold  
-[I Stole the Number One Ranker’s Soul](https://nitroscans.com/series/i-stole-the-number-one-ranker-s-soul/) -- 92 -- Reading  
+[I Stole the Number One Ranker’s Soul](https://nitroscans.com/series/i-stole-the-number-one-ranker-s-soul/) -- 94 -- Reading  
 [Past Life Returner](https://nitroscans.com/series/past-life-returner-remake-2022/) -- 47 -- On Hold  
 [My Miniature Kingdom](https://nitroscans.com/series/my-miniature-kingdom/) -- 9 -- Reading  
-[Max Level Player](https://nitroscans.com/series/max-level-player/) -- 74 -- Reading  
+[Max Level Player](https://nitroscans.com/series/max-level-player/) -- 76 -- Reading  
 [The Newbie is Too Strong](https://nitroscans.com/series/the-newbie-is-too-strong/) -- 110 -- Reading  
 [Youngest Son of the Renowned Magic Clans](https://nitroscans.com/series/youngest-son-of-the-renowned-magic-clan/) -- 66 -- Reading  
 [King of Abyss](https://nitroscans.com/series/lord-of-the-abyss/) -- 27 -- On Hold  
@@ -11,11 +11,11 @@
 [Logging 10,000 Years into the Future](https://nitroscans.com/series/logging-10-000-years-into-the-future/) -- 145 -- Reading  
 [SSS-Rank Lone Summoner](https://nitroscans.com/series/sss-rank-lone-summoner/) -- 56 -- On Hold  
 [The Rebirth of an 8th-Circled Mage](https://nitroscans.com/series/the-rebirth-of-an-8th-circled-mage/) -- 160 -- On Hold  
-[Infinite Mage](https://nitroscans.com/series/infinite-mage/) -- 85 -- Reading  
+[Infinite Mage](https://nitroscans.com/series/infinite-mage/) -- 86 -- Reading  
 [On My Way to Kill God](https://nitroscans.com/series/on-my-way-to-kill-god/) -- 50 -- On Hold  
-[Pick Me Up](https://manga4life.com/manga/Pick-Me-Up-Infinite-Gacha) -- 115 -- Reading  
+[Pick Me Up](https://manga4life.com/manga/Pick-Me-Up-Infinite-Gacha) -- 116 -- Reading  
 [Reborn Ranker - Gravity User](https://nitroscans.com/series/reborn-ranker-gravity-user/) -- 75 -- On Hold  
-[Dungeon Odyssey](https://nitroscans.com/series/dungeon-odyssey/) -- 102 -- Reading  
+[Dungeon Odyssey](https://nitroscans.com/series/dungeon-odyssey/) -- 103 -- Reading  
 [I Just Want To Game In Peace](https://nitroscans.com/series/let-me-game-in-peace/) -- 129 -- Reading  
 [Rise of The Cheat User](https://nitroscans.com/series/rise-of-the-cheat-user/) -- 21 -- On Hold  
 [The Legendary Mechanic ](https://nitroscans.com/series/the-legendary-mechanic/) -- 200 -- On Hold  
@@ -23,8 +23,8 @@
 [The Evolution ](https://nitroscans.com/series/the-evolution/) -- 31 -- On Hold  
 [Reincarnated as a Son of an Aristocrat ](https://nitroscans.com/series/reincarnated-as-a-son-of-an-aristocrat/) -- 70 -- On Hold  
 [Reverse Tower Dungeon ](https://nitroscans.com/series/reverse-tower-dungeon/p) -- 17 -- On Hold  
-[Transcension Academy](https://nitroscans.com/series/transcension-academy/) -- 127 -- Reading  
-[Life of a Magic Academy Mage](https://nitroscans.com/series/life-of-a-magic-academy-mage/) -- 112 -- Reading  
+[Transcension Academy](https://nitroscans.com/series/transcension-academy/) -- 128 -- Reading  
+[Life of a Magic Academy Mage](https://nitroscans.com/series/life-of-a-magic-academy-mage/) -- 113 -- Reading  
 [Seoul Station Necromancer](https://nitroscans.com/series/seoul-station-s-necromancer/) -- 138 -- On Hold  
 [Super Evolution ](https://nitroscans.com/series/super-evolution/) -- 106 -- On Hold  
 [Archmage Transcending Through Regression](https://nitroscans.com/series/archmage-transcending-through-regression/) -- 107 -- On Hold  
@@ -32,7 +32,7 @@
 [Earthlings are Insane](https://nitroscans.com/series/earthlings-are-insane/) -- 128 -- On Hold  
 [I Have Max Level Luck](https://nitroscans.com/series/i-have-max-level-luck/) -- 87 -- Reading  
 [Demonic Emperor](https://nitroscans.com/series/magic-emperor/) -- 600 -- Reading  
-[Youngest Son of the Renowned Swordsmanship Clan](https://nitroscans.com/series/swordmaster-s-youngest-son/) -- 131 -- Reading  
+[Youngest Son of the Renowned Swordsmanship Clan](https://nitroscans.com/series/swordmaster-s-youngest-son/) -- 132 -- Reading  
 [The Gaming Stream of the Genius](https://nitroscans.com/series/gaming-stream-of-the-genius/) -- 22 -- On Hold  
 [Overpowered Sword](https://nitroscans.com/series/overpowered-sword/) -- 101 -- On Hold  
 [Stuck In The Tower](https://nitroscans.com/series/stuck-in-the-tower/) -- 84 -- On Hold  
@@ -61,7 +61,7 @@
 [S Rank Boukensha de aru Ore no Musume-tachi](https://manga4life.com/manga/S-Rank-Boukensha-de-aru-Ore-no-Musume-tachi) -- 30 -- On Hold  
 [The Tale of the Outcasts](https://manga4life.com/manga/The-Tale-of-the-Outcasts) -- 0 -- To Read  
 [The Reincarnated Vampire Wants an Afternoon Nap](https://manga4life.com/manga/Tensei-Kyuuketsuki-san-Wa-Ohirune-Ga-Shitai) -- 30 -- On Hold  
-[The Return of the Disaster-Class Hero](https://manga4life.com/manga/Return-of-the-Disaster-Class-Hero) -- 93 -- Reading  
+[The Return of the Disaster-Class Hero](https://manga4life.com/manga/Return-of-the-Disaster-Class-Hero) -- 94 -- Reading  
 [Saikyou no Maou ni Kitaerareta Yuusha Isekai](https://manga4life.com/manga/Saikyou-no-Maou-ni-Kitaerareta-Yuusha-Isekai) -- 25 -- On Hold  
 [By the Grace of the Gods](https://manga4life.com/manga/Kamitachi-Ni-Hirowareta-Otoko) -- 48.5 -- On Hold  
 [Descent of the Demon Master](https://manga4life.com/manga/Descent-of-the-Demonic-Master) -- 149 -- On Hold  
@@ -79,7 +79,7 @@
 [Reborn to Master the Blade - From Hero-King to Extraordinary Squire](https://manga4life.com/manga/Eiyu-Oh-Bu-wo-Kiwameru-Tame-Tensei-Su-Soshite-Sekai-Saikyou-no-Minarai-Kisi) -- 21.5 -- On Hold  
 [I Became a Legend a Decade Later After Telling my Comrades to Leave Everything to Me and Retreat First](https://manga4life.com/manga/Koko-wa-Ore-ni-Makasete-Saki-ni-Ike-to-Itte-kara-10-Nen-ga-Tattara-Densetsu-ni-Natteita) -- 32.5 -- On Hold  
 [Why Does Nobody Remember Me in This World?](https://manga4life.com/manga/Naze-Boku-No-Sekai-Wo-Daremo-Oboeteinai-No-Ka) -- 44 -- On Hold  
-[Second Life Ranker](https://manga4life.com/manga/Second-Life-Ranker) -- 183 -- Reading  
+[Second Life Ranker](https://manga4life.com/manga/Second-Life-Ranker) -- 184 -- Reading  
 [Reincarnated as a Sword](https://manga4life.com/manga/I-Was-A-Sword-When-I-Reincarnated) -- 77 -- On Hold  
 [Kaiju No. 8](https://manga4life.com/manga/Monster-8) -- 60 -- On Hold  
 [As Long as I Have the [Shop] Skill, I'll Have an Easy Life](https://manga4life.com/manga/As-Long-as-I-Have-the-Shop-Skill) -- 22.5 -- On Hold  
@@ -88,14 +88,14 @@
 [She Professed Herself Pupil of the Wise Man](https://manga4life.com/manga/Kenja-No-Deshi-Wo-Nanoru-Kenja) -- 67 -- Reading  
 [My Blasted Reincarnated Life](https://manga4life.com/manga/My-Blasted-Reincarnated-Life) -- 66 -- On Hold  
 [The Archmage Returns After 4000 Years](https://manga4life.com/manga/The-Great-Mage-Returns-After-4000-Years) -- 189 -- Reading  
-[The Hero Returns](https://manga4life.com/manga/The-Hero-Returns) -- 91 -- Reading  
+[The Hero Returns](https://manga4life.com/manga/The-Hero-Returns) -- 94 -- Reading  
 [ Muscles Are Better Than Magic!](https://manga4life.com/manga/Mahou-Sonna-Koto-Yori-Kinniku-Da) -- 21.5 -- On Hold  
 [The Amazing Village Creator: Slow Living With the Village Building Cheat](https://manga4life.com/manga/The-Amazing-Village-Creator-Slow-Living-with-the-Village-Building-Cheat-Skill) -- 35 -- On Hold  
 [Chronicles of an Aristocrat Reborn in Another World](https://manga4life.com/manga/Tensei-Kizoku-No-Isekai-Boukenroku-jichou-Wo-Shiranai-Kamigami-No-Shito) -- 56 -- On Hold  
 [The Magical Revolution of the Reincarnated Princess and the Genius](https://manga4life.com/manga/The-Magical-Revolution-of-the-Reincarnated-Princess-and-the-Genius-Young-Lady) -- 40 -- On Hold  
 [I'm the Only Monster Tamer in the World and Was Mistaken for the Demon Lord](https://manga4life.com/manga/Sekai-de-Tadahitori-no-Mamono-Tsukai) -- 53.2 -- On Hold  
 [Made in Abyss](https://manga4life.com/manga/Made-In-Abyss) -- 60 -- On Hold  
-[Dungeon Reset](https://manga4life.com/manga/Dungeon-Reset) -- 216 -- Reading  
+[Dungeon Reset](https://manga4life.com/manga/Dungeon-Reset) -- 217 -- Reading  
 [Player From Today Onwards](https://manga4life.com/manga/Player-from-Today-Onwards) -- 81 -- On Hold  
 [A Warrior Exiled by the Hero and His Lover](https://manga4life.com/manga/A-Warrior-Exiled-by-the-Hero-and-His-Lover) -- 27 -- On Hold  
 [Isekai ni Teni Shitara Yama no Naka datta](https://manga4life.com/manga/Isekai-ni-Teni-Shitara-Yama-no-Naka-datta) -- 24 -- On Hold  
@@ -104,7 +104,7 @@
 [ Loner Life in Another World](https://manga4life.com/manga/Hitoribocchi-no-Isekai-Kouryaku) -- 235 -- On Hold  
 [The Reincarnation Magician of the Inferior Eyes](https://manga4life.com/manga/The-Reincarnation-Magician-Of-The-Inferior-Eyes) -- 114 -- Reading  
 [Even Given the Worthless 'Appraiser' Class, I'm Actually the Strongest](https://manga4life.com/manga/The-Unfavorable-Job-Appraiser-Is-Actually-the-Strongest) -- 97 -- On Hold  
-[One Punch Man](https://manga4life.com/manga/Onepunch-Man) -- 204 -- Reading  
+[One Punch Man](https://manga4life.com/manga/Onepunch-Man) -- 205 -- Reading  
 [Chillin' in Another World with Level 2 Super Cheat Powers](https://manga4life.com/manga/Lv2-kara-Cheat-datta-Moto-Yuusha-Kouho-no-Mattari-Isekai-Life) -- 52 -- On Hold  
 [ The World Is Full of Monsters Now](https://manga4life.com/manga/The-World-Is-Full-of-Monsters-Now-Therefore-I-Want-to-Live-as-I-Wish) -- 48 -- On Hold  
 [ How to Treat Magical Beasts](https://manga4life.com/manga/Watashi-To-Sensei-No-Genjuu-Shinryouroku) -- 5 -- On Hold  
@@ -113,7 +113,7 @@
 [The Executed Sage Is Reincarnated as a Lich and Starts an All-Out War](https://manga4life.com/manga/The-Executed-Sage-Is-Reincarnated-as-a-Lich-and-Starts-an-All-Out-War) -- 37 -- On Hold  
 [The Misfit of Demon King Academy](https://manga4life.com/manga/Maou-Gakuin-no-Futekigousha) -- 15 -- Reading  
 [Shoukan sareta Kenja wa Isekai wo Yuku](https://manga4life.com/manga/Shoukan-sareta-Kenja-wa-Isekai-wo-Yuku) -- 37.1 -- On Hold  
-[The Tutorial is Too Tough](https://manga4life.com/manga/The-Tutorial-is-Too-Hard) -- 184 -- Reading  
+[The Tutorial is Too Tough](https://manga4life.com/manga/The-Tutorial-is-Too-Hard) -- 185 -- Reading  
 [Reborn as a Scholar](https://manga4life.com/manga/The-Scholars-Reincarnation) -- 198 -- On Hold  
 [It Seems the Strongest Job is Not Hero nor Sage](https://manga4life.com/manga/Saikyou-No-Shokugyou-Wa-Yuusha) -- 42 -- On Hold  
 [D-kyuu Boukensha no Ore, Naze ka Yuusha Party ni Kanyuu Sareta Ageku, Oujo ni Tsukima Towareteru](https://manga4life.com/manga/D-kyuu-Boukensha-no-Ore-Naze-ka-Yuusha-Party-ni-Kanyuu-Sareta-Ageku-Oujo-ni-Tsukima-Towareteru) -- 28 -- On Hold  
@@ -132,7 +132,7 @@
 [Leveling Beyond the Max](https://manga4life.com/manga/Maxed-Out-Leveling) -- 66 -- Reading  
 [I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magicals](https://manga4life.com/manga/Tensei-Shitara-dai-Nana-Ouji-dattanode-Kimamani-Majutsu-o-Kiwamemasu) -- 138 -- On Hold  
 [The Chronicles of the Misfit Quartet and Their Unrivaled Synergy](https://manga4life.com/manga/The-Chronicles-of-the-Misfit-Quartet-and-Their-Unrivaled-Synergy) -- 7 -- On Hold  
-[I'm the Max-Level Newbie](https://manga4life.com/manga/Solo-Max-Level-Newbie) -- 173 -- Reading  
+[I'm the Max-Level Newbie](https://manga4life.com/manga/Solo-Max-Level-Newbie) -- 174 -- Reading  
 [Is This Hero for Real?](https://manga4life.com/manga/Is-this-Hero-for-Real) -- 101 -- Reading  
 [ Souzou Renkinjutsushi wa Jiyuu wo Ouka suru](https://manga4life.com/manga/Souzou-Renkinjutsushi-wa-Jiyuu-wo-Ouka-suru) -- 12.1 -- On Hold  
 [The Beginning After the End](https://manga4life.com/manga/The-Beginning-After-The-End) -- 188 -- Reading  
@@ -154,14 +154,14 @@
 [I Rose Suddenly in the Alternate World by Overwhelming Gacha With Luck!](https://manga4life.com/manga/Attouteki-Gacha-Un-de-Isekai-wo-Nariagaru) -- 38 -- On Hold  
 [ Beyond the Clouds](https://manga4life.com/manga/Beyond-the-Clouds) -- 20 -- On Hold  
 [Kill The Hero](https://manga4life.com/manga/Kill-The-Hero) -- 143 -- On Hold  
-[Talent-Swallowing Magician](https://manga4life.com/manga/Talent-Swallowing-Magician) -- 93 -- Reading  
+[Talent-Swallowing Magician](https://manga4life.com/manga/Talent-Swallowing-Magician) -- 94 -- Reading  
 [Konosuba: God's Blessing on This Wonderful World!](https://manga4life.com/manga/Kono-Subarashii-Sekai-Ni-Shukufuku-O) -- 118 -- On Hold  
 [ The Magic in This Other World Is Too Far Behind!](https://manga4life.com/manga/Isekai-Mahou-Wa-Okureteru) -- 50 -- On Hold  
 [The Most Notorious 'Talker' Runs the World's Greatest Clan](https://manga4life.com/manga/The-Most-Notorious-Talker-Runs-the-Worlds-Greatest-Clan) -- 47 -- On Hold  
 [LV999 Villager](https://manga4life.com/manga/Lv999-No-Murabito) -- 69 -- On Hold  
 [SSS-Class Revival Hunter](https://manga4life.com/manga/SSS-Class-Suicide-Hunter) -- 115 -- Reading  
 [RWBY](https://manga4life.com/manga/R-W-B-Y) -- 0 -- To Read  
-[Shangri-La Frontier](https://manga4life.com/manga/Shangri-La-Frontier) -- 193 -- Reading  
+[Shangri-La Frontier](https://manga4life.com/manga/Shangri-La-Frontier) -- 194 -- Reading  
 [Asumi-chan is Interested in Lesbian Brothels!](https://manga4life.com/manga/Asumi-chan-is-Interested-in-Lesbian-Brothels) -- 17 -- Reading  
 [Berserk of Gluttony](https://manga4life.com/manga/Berserk-Of-Gluttony) -- 63 -- On Hold  
 [That Time I Got Reincarnated as a Slime](https://manga4life.com/manga/Tensei-Shitara-Slime-Datta-Ken) -- 118 -- On Hold  
@@ -172,7 +172,7 @@
 [This Is Screwed Up, but I Was Reincarnated as a GIRL in Another World!](https://manga4life.com/manga/I-Dont-Really-Get-It-but-It-Looks-Like-I-Was-Reincarnated-in-Another-World) -- 36 -- On Hold  
 [The Strongest Sage with the Weakest Crest](https://manga4life.com/manga/Shikkaku-Mon-No-Saikyou-Kenja) -- 77 -- Reading  
 [ Spy x Family](https://manga4life.com/manga/Spy-X-Family) -- 68.1 -- On Hold  
-[The Frozen Player Returns](https://manga4life.com/manga/Return-of-the-Frozen-Player) -- 142 -- Reading  
+[The Frozen Player Returns](https://manga4life.com/manga/Return-of-the-Frozen-Player) -- 143 -- Reading  
 [Ranker’s Return (Remake)](https://manga4life.com/manga/Rankers-Return-Remake) -- 162 -- Reading  
 [One Piece](https://manga4life.com/manga/One-Piece) -- 1065 -- On Hold  
 [Tomb Raider King](https://manga4life.com/manga/Tomb-Raider-King) -- 411 -- Reading  
@@ -186,7 +186,7 @@
 [Mission: Yozakura Family](https://manga4life.com/manga/Mission-Yozakura-Family) -- 244 -- Reading  
 [The Irregular of the Royal Academy of Magic](https://manga4life.com/manga/The-Irregular-of-the-Royal-Academy-of-Magic) -- 59 -- Reading  
 [Heavenly Demon Instructor](https://manga4life.com/manga/Heavenly-Demon-Instructor) -- 105 -- Reading  
-[Overgeared](https://manga4life.com/manga/Overgeared) -- 250 -- Reading  
+[Overgeared](https://manga4life.com/manga/Overgeared) -- 251 -- Reading  
 [Campfire Cooking in Another World with my Absurd Skill](https://manga4life.com/manga/Tondemo-Skill-De-Isekai-Hourou-Meshi) -- 59.2 -- On Hold  
 [Solo Glitch Player](https://manga4life.com/manga/Solo-Bug-Player) -- 0 -- On Hold  
 [The Max Level Returner](https://manga4life.com/manga/Max-Level-Returner) -- 184 -- On Hold  
@@ -203,32 +203,32 @@
 [The Knight King Who Returned with a God](https://nitroscans.com/series/the-knight-king-who-returned-with-a-god/) -- 37 -- On Hold  
 [The Hero Life of a (Self-Proclaimed) 'Mediocre' Demon!](https://manga4life.com/manga/Jishou-Heibon-Mazoku-No-Eiyuu-Life) -- 34 -- On Hold  
 [Ore dake Fuguu Skill no Isekai Shoukan Hangyakuki](https://manga4life.com/manga/Ore-dake-Fuguu-Skill-no-Isekai-Shoukan-Hangyakuki) -- 60 -- On Hold  
-[Fly Me to the Moon](https://manga4life.com/manga/Tonikaku-Kawaii) -- 288 -- Reading  
+[Fly Me to the Moon](https://manga4life.com/manga/Tonikaku-Kawaii) -- 289 -- Reading  
 [Demon Lord Exchange!!](https://manga4life.com/manga/Demon-Lord-Exchange) -- 23 -- On Hold  
-[The God of War Who Regressed to Level 2](https://nitroscans.com/series/martial-god-regressed-to-level-2/) -- 69 -- Reading  
+[The God of War Who Regressed to Level 2](https://nitroscans.com/series/martial-god-regressed-to-level-2/) -- 70 -- Reading  
 [Insanely Talented Player](https://nitroscans.com/series/insanely-talented-player/) -- 10 -- On Hold  
 [Worn and Torn Newbie](https://manga4life.com/manga/Worn-and-Torn-Newbie) -- 202 -- Reading  
 [The Strongest Assassin Gets Transferred to Another World With His Whole Class](https://arvenscans.com/series/the-strongest-assassin-gets-transferred/) -- 2 -- On Hold  
-[Terminally-Ill Genius Dark Knight](https://nitroscans.com/series/terminally-ill-genius-dark-knight/) -- 75 -- Reading  
-[Heavenly Grand Archive’s Young Master](https://nitroscans.com/series/heavenly-grand-archive-s-young-master/) -- 96 -- Reading  
+[Terminally-Ill Genius Dark Knight](https://nitroscans.com/series/terminally-ill-genius-dark-knight/) -- 76 -- Reading  
+[Heavenly Grand Archive’s Young Master](https://nitroscans.com/series/heavenly-grand-archive-s-young-master/) -- 97 -- Reading  
 [The Novel’s Extra](https://nitroscans.com/series/the-novel-s-extra/) -- 99 -- On Hold  
 [Updater](https://nitroscans.com/series/updater/) -- 70 -- On Hold  
 [Does it Count if You Lose Your Virginity to an Android](https://manga4life.com/manga/Does-it-Count-if-You-Lose-Your-Virginity-to-an-Android) -- 10 -- On Hold  
 [The Dark Mage’s Return to Enlistment](https://nitroscans.com/series/the-dark-mage-s-return-to-enlistment/) -- 50 -- On Hold  
 [Gods’ Gambit](https://nitroscans.com/series/gods-gambit/) -- 44 -- On Hold  
-[Necromancer’s Evolutionary Traits](https://nitroscans.com/series/necromancer-s-evolutionary-traits/) -- 68 -- Reading  
-[Dragon-Devouring Mage](https://nitroscans.com/series/dragon-devouring-mage/) -- 74 -- Reading  
+[Necromancer’s Evolutionary Traits](https://nitroscans.com/series/necromancer-s-evolutionary-traits/) -- 70 -- Reading  
+[Dragon-Devouring Mage](https://nitroscans.com/series/dragon-devouring-mage/) -- 75 -- Reading  
 [My Daughter is the Final Boss](https://nitroscans.com/series/my-daughter-is-the-final-boss/) -- 129 -- On Hold  
-[World’s Strongest Troll](https://manga4life.com/manga/Worlds-Strongest-Troll) -- 87 -- Reading  
+[World’s Strongest Troll](https://manga4life.com/manga/Worlds-Strongest-Troll) -- 88 -- Reading  
 [Heir Of Mythical Heroes](https://nitroscans.com/series/heir-of-mythical-heroes/) -- 50 -- On Hold  
-[I Killed an Academy Player](https://nitroscans.com/series/i-killed-an-academy-player/) -- 52 -- Reading  
+[I Killed an Academy Player](https://nitroscans.com/series/i-killed-an-academy-player/) -- 53 -- Reading  
 [Regressing with the King’s Power](https://nitroscans.com/series/regressing-with-the-kings-power/) -- 47 -- On Hold  
 [Academy’s Genius Swordmaster](https://nitroscans.com/series/academy-s-genius-swordsman/) -- 23 -- On Hold  
 [No Game, No Life](https://manga4life.com/manga/No-Game-No-Life) -- 11 -- On Hold  
 [Demon Lord’s Martial Arts Ascension](https://nitroscans.com/series/demon-lord-s-martial-arts-ascension/) -- 85 -- Reading  
 [Weapon Maker](https://nitroscans.com/series/weapon-maker/) -- 29 -- On Hold  
 [Ending Maker](https://nitroscans.com/series/ending-maker/) -- 67 -- Reading  
-[The Priest of Corruption](https://nitroscans.com/series/the-priest-of-corruption/) -- 51 -- Reading  
+[The Priest of Corruption](https://nitroscans.com/series/the-priest-of-corruption/) -- 56 -- Reading  
 [Steel-Eating Player](https://nitroscans.com/series/steel-eating-player/) -- 51 -- Reading  
 [Everyone Else is A Returnee](https://nitroscans.com/series/everyone-else-is-a-returnee/) -- 46 -- On Hold  
 [Poison-Eating Healer](https://nitroscans.com/series/poison-eating-healer/) -- 50 -- On Hold  
