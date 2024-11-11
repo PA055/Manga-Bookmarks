@@ -10,7 +10,8 @@ class Config(object):
 class Settings():
     USE_ORIGINAL = False
     REPLACE_SERIES_WITH_MANGAS = False
-    NITROSCANS_WEBSITE_HOST = "https://nitroscans.net"
+    NITROSCANS_WEBSITE_HOST = "https://darkscans.net"
+    # NITROSCANS_WEBSITE_HOST = "https://nitroscans.net"
     # NITROSCANS_WEBSITE_HOST = "https://darkscans.com"
     # NITROSCANS_WEBSITE_HOST = "https://nitroscans.com"
     # NITROSCANS_WEBSITE_HOST = "https://mangabaz.net"
