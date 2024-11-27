@@ -14,7 +14,7 @@ def get_chapter_number(text):
     return 0
 
 def get_numbers(text):
-    return float(re.search('\d+\.?\d*', text).group())
+    return float((re.search(r'\d+\.?\d*', text) or re.search(r'\d', '0')).group())
 
 
 def clean_up(f):

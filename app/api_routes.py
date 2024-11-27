@@ -33,10 +33,10 @@ async def mpark(session, bookmark):
         r = await session.get(link)
         chapters = [c for c in r.html.find('div.scrollable-panel > div > div > div > a')]
         olderChapters = [c for c in chapters if helper.get_numbers(c.text) > bookmark.chapter]
-        
+
         # with open('./debug/mangapark/' + bookmark.mname + '.txt', 'w') as f:
         #     f.write(str([[helper.get_numbers(chapter.text[:25]), chapter.attrs['href']] for chapter in chapters]).replace('[', '\n    ['))
-        
+
         if len(olderChapters) == 0:
             return {
                 'id': bookmark.id,
@@ -47,7 +47,7 @@ async def mpark(session, bookmark):
 
         return {
             'id': bookmark.id,
-            'link': min(olderChapters, key=lambda a: helper.get_numbers(a.text[:25])).attrs['href'],
+            'link': Settings.MANGAPARK_WEBSITE_HOST + min(olderChapters, key=lambda a: helper.get_numbers(a.text[:25])).attrs['href'],
             'chapter': helper.clean_float(helper.get_numbers(max(chapters, key=lambda a: helper.get_numbers(a.text[:25])).text[:25])),
             'num_chapters': len(olderChapters)
         }
