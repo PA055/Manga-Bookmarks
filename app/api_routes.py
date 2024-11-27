@@ -20,6 +20,44 @@ async def fallback(bookmark):
         'num_chapters': -1
     }
 
+async def mpark(session, bookmark):
+    try:
+        link = bookmark.link
+        if not Settings.USE_ORIGINAL:
+            if not bookmark.link.startswith(Settings.MANGAPARK_WEBSITE_HOST):
+                host = helper.get_host(bookmark.link)
+                link = Settings.MANGAPARK_WEBSITE_HOST + bookmark.link[len(host):]
+            else:
+                link = bookmark.link
+
+        r = await session.get(link)
+        chapters = [c for c in r.html.find('div.scrollable-panel > div > div > div > a')]
+        olderChapters = [c for c in chapters if helper.get_numbers(c.text) > bookmark.chapter]
+        
+        # with open('./debug/mangapark/' + bookmark.mname + '.txt', 'w') as f:
+        #     f.write(str([[helper.get_numbers(chapter.text[:25]), chapter.attrs['href']] for chapter in chapters]).replace('[', '\n    ['))
+        
+        if len(olderChapters) == 0:
+            return {
+                'id': bookmark.id,
+                'link': link,
+                'chapter': bookmark.chapter,
+                'num_chapters': 0
+            }
+
+        return {
+            'id': bookmark.id,
+            'link': min(olderChapters, key=lambda a: helper.get_numbers(a.text[:25])).attrs['href'],
+            'chapter': helper.clean_float(helper.get_numbers(max(chapters, key=lambda a: helper.get_numbers(a.text[:25])).text[:25])),
+            'num_chapters': len(olderChapters)
+        }
+    except Exception:
+        print('-'*50)
+        print(bookmark.mname)
+        traceback.print_exc()
+        print('-'*50)
+        return await fallback(bookmark)
+
 async def asura(session, bookmark):
     try:
         link = bookmark.link
@@ -159,8 +197,9 @@ async def main(db: Session = Depends(app.get_db)):
         manga(session, bookmark) if 'https://manga4life.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://darkscans.com'   in bookmark.link else (
-        asura(session, bookmark) if 'https://asuracomic.net'   in bookmark.link else (
-        fallback(bookmark)))))
+        asura(session, bookmark) if 'https://asuracomic.net'  in bookmark.link else (
+        mpark(session, bookmark) if 'https://mangapark.net'   in bookmark.link else (
+        fallback(bookmark))))))
         for bookmark in bookmarks))
 
     updates = {}
@@ -179,7 +218,8 @@ async def main(db: Session = Depends(app.get_db)):
         'site': "Manga4Life" if 'https://manga4life.com' in i.link else (
                 "Nitro Scans" if 'https://nitroscans.com' in i.link else (
                 "Asura Scans" if 'https://asuracomic.net' in i.link else (
-                "Unknown - " + helper.get_host(i.link))))
+                "Manga Park" if 'https://mangapark.net' in i.link else (
+                "Unknown - " + helper.get_host(i.link)))))
     } for i in bookmarks]
 
 
@@ -194,8 +234,9 @@ async def status(status: int, db: Session = Depends(app.get_db)):
         manga(session, bookmark) if 'https://manga4life.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://darkscans.com'   in bookmark.link else (
-        asura(session, bookmark) if 'https://asuracomic.net'   in bookmark.link else (
-        fallback(bookmark)))))
+        asura(session, bookmark) if 'https://asuracomic.net'  in bookmark.link else (
+        mpark(session, bookmark) if 'https://mangapark.net'   in bookmark.link else (
+        fallback(bookmark))))))
         for bookmark in bookmarks))
 
     updates = {}
@@ -216,5 +257,6 @@ async def status(status: int, db: Session = Depends(app.get_db)):
         'site': "Manga4Life" if 'https://manga4life.com' in i.link else (
                 "Nitro Scans" if 'https://nitroscans.com' in i.link else (
                 "Asura Scans" if 'https://asuracomic.net' in i.link else (
-                    "Unknown - " + helper.get_host(i.link))))
+                "Manga Park" if 'https://mangapark.net' in i.link else (
+                    "Unknown - " + helper.get_host(i.link)))))
     } for i in bookmarks]
