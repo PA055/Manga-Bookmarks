@@ -18,3 +18,4 @@ class Settings():
     MANGA4LIFE_WEBSITE_HOST = "https://manga4life.com"
     ASURASCANS_WEBSITE_HOST = 'https://asuracomic.net'
     ASURASCANS_WEBSITE_NUMBER = '1908287720'
+    MANGAPARK_WEBSITE_HOST = 'https://mangapark.net'
