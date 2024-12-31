@@ -195,10 +195,10 @@ async def main(db: Session = Depends(app.get_db)):
 
     results = await asyncio.gather(*(
         manga(session, bookmark) if 'https://manga4life.com'  in bookmark.link else (
-        nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark.link else (
-        nitro(session, bookmark) if 'https://darkscans.com'   in bookmark.link else (
+        nitro(session, bookmark) if 'https://nitroscans'  in bookmark.link else (
+        nitro(session, bookmark) if 'https://darkscans'   in bookmark.link else (
         asura(session, bookmark) if 'https://asuracomic.net'  in bookmark.link else (
-        mpark(session, bookmark) if 'https://mangapark.net'   in bookmark.link else (
+        mpark(session, bookmark) if 'https://mangapark'   in bookmark.link else (
         fallback(bookmark))))))
         for bookmark in bookmarks))
 
@@ -218,7 +218,7 @@ async def main(db: Session = Depends(app.get_db)):
         'site': "Manga4Life" if 'https://manga4life.com' in i.link else (
                 "Nitro Scans" if 'https://nitroscans.com' in i.link else (
                 "Asura Scans" if 'https://asuracomic.net' in i.link else (
-                "Manga Park" if 'https://mangapark.net' in i.link else (
+                "Manga Park" if 'https://mangapark' in i.link else (
                 "Unknown - " + helper.get_host(i.link)))))
     } for i in bookmarks]
 
@@ -235,7 +235,7 @@ async def status(status: int, db: Session = Depends(app.get_db)):
         nitro(session, bookmark) if 'https://nitroscans.com'  in bookmark.link else (
         nitro(session, bookmark) if 'https://darkscans.com'   in bookmark.link else (
         asura(session, bookmark) if 'https://asuracomic.net'  in bookmark.link else (
-        mpark(session, bookmark) if 'https://mangapark.net'   in bookmark.link else (
+        mpark(session, bookmark) if 'https://mangapark'   in bookmark.link else (
         fallback(bookmark))))))
         for bookmark in bookmarks))
 
@@ -254,9 +254,9 @@ async def status(status: int, db: Session = Depends(app.get_db)):
         'latest': helper.clean_float(updates[i.id]['chapter']),
         'latest_link': updates[i.id]['link'],
         'num_new_chapters': updates[i.id]['num_chapters'],
-        'site': "Manga4Life" if 'https://manga4life.com' in i.link else (
-                "Nitro Scans" if 'https://nitroscans.com' in i.link else (
-                "Asura Scans" if 'https://asuracomic.net' in i.link else (
-                "Manga Park" if 'https://mangapark.net' in i.link else (
+        'site': "Manga4Life" if 'https://manga4life' in i.link else (
+                "Nitro Scans" if 'https://nitroscans' in i.link else (
+                "Asura Scans" if 'https://asuracomic' in i.link else (
+                "Manga Park" if 'https://mangapark' in i.link else (
                     "Unknown - " + helper.get_host(i.link)))))
     } for i in bookmarks]
